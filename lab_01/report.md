@@ -23,6 +23,6 @@
     - если $A \in \sigma$, то $\overline{A} \in \sigma$;
     - если $A_1, \dots, A_n, \dots \in \sigma$, то $A_1 + \dots + A_n + \dots \in \sigma$.
 
-    *Пример:* $\Omega = \left\{1, 2, 3, 4\right\}, \newline \sigma = \left\{\left\{1\right\}, \left\{2\right\}, \left\{3\right\}, \left\{4\right\},\left\{1, 2\right\}, \left\{1, 3\right\}, \left\{1, 4\right\}, \left\{2, 3\right\}, \left\{2, 4\right\}, \left\{3, 4\right\}, \left\{1, 2, 3\right\}, \left\{1, 2, 4\right\}, \left\{2, 4, 3\right\}\right\}$ 
+    *Пример:* $\Omega = \left\lbrace1, 2, 3, 4\right\rbrace, \newline \sigma = \left\lbrace\left\lbrace1\right\rbrace, \left\lbrace2\right\rbrace, \left\lbrace3\right\rbrace, \left\lbrace4\right\rbrace,\left\lbrace1, 2\right\rbrace, \left\lbrace1, 3\right\rbrace, \left\lbrace1, 4\right\rbrace, \left\lbrace2, 3\right\rbrace, \left\lbrace2, 4\right\rbrace, \left\lbrace3, 4\right\rbrace, \left\lbrace1, 2, 3\right\rbrace, \left\lbrace1, 2, 4\right\rbrace, \left\lbrace2, 4, 3\right\rbrace\right\rbrace$ 
 
 - События, имеющие одинаковую вероятность.
