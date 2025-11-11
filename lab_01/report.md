@@ -152,7 +152,7 @@ $$
 Пусть $X_1, X_2, X_3$ - число попаданий в части 1 - 3 при $m$ выстрелах. Это полиномиальное распределение.
 
 $$
-A = \left\{X_1 \ge 1 \right\} \cup \left\{X_2 \ge 2\right\} \cup \left\{X_3 \ge 3\right\}
+A = \left\lbrace X_1 \ge 1 \right\rbrace \cup \left\lbrace X_2 \ge 2\right\rbrace \cup \left\lbrace X_3 \ge 3\right\rbrace
 $$
 
 Вероятность $(P)$ того, что исход 1 произойдёт ровно $n_1$ раз, исход 2 - ровно $n_2$ раз, …, исход k - ровно $n_k$ раз, вычисляется по формуле: $P = \frac{n!}{n1! × n2! × … × nk!} * (p_1^{n_1} × p_2^{n_2} × … × p_k^{n_k}), где n = n_1 + n_2 + … + n_k$.
