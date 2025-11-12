@@ -179,16 +179,11 @@ $$
 
    - $X_2 = 0, X_3 = 0, 1, 2$, остальное в $X_0$
     
-    $$
-    P = \sum_{k = 0}^{2}
-    \frac{3!}{k!(3-k)!}p_{3}^{k}p_{0}^{3 - k}
-    $$
+        $P = \sum_{k = 0}^{2}\frac{3!}{k!(3-k)!}p_{3}^{k}p_{0}^{3 - k}$
 
    - $X_2 = 1, X_3 = 0, 1, 2$
     
-    $$
-    P = \sum_{k = 0}^{2} \frac{3!}{1!k!(2-k)!}p_{2}p_{0}^{k}p_{3}^{2 - k}
-    $$ 
+        $P = \sum_{k = 0}^{2} \frac{3!}{1!k!(2-k)!}p_{2}p_{0}^{k}p_{3}^{2 - k}$ 
     
     $P(A | m = 3) = 1 - \sum_{k = 0}^{2} \frac{3!}{k!(3-k)!} p_{3}^{k}p_{0}^{3 - k} - \sum_{k = 0}^{2} \frac{3!}{1!k!(2-k)!}p_{2}p_{0}^{k}p_{3}^{2 - k}$
 5. m = 4
@@ -232,12 +227,7 @@ $$
 2. $\underset{\mathbb{R^2}}{\int_{}^{}\int_{}^{}}f_{\xi}(x, y)dxdy = 1$
 
 Проверим эти свойства:
-1. $
-\left\lbrace \begin{array}{cl}
-e^{-2 |y|} > 0 & y \in (-\infty , +\infty )\\
-\pi(1 + x^2) > 0 & x \in (-\infty , +\infty )
-\end{array} \right. 
-$
+1. $\left\lbrace \begin{array}{cl} e^{-2 |y|} > 0 & y \in (-\infty , +\infty )\\ \pi(1 + x^2) > 0 & x \in (-\infty , +\infty )\end{array} \right.$
 2. $\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{e^{-2 |y|}}{\pi(1 + x^2)}dxdy = \left[ \int_{-\infty}^{\infty} \frac{dx}{\pi(1 + x^2)} \right]\left[ \int_{-\infty}^{\infty}e^{-2 |y|} dy\right]$
    
    1. $\int_{-\infty}^{\infty} \frac{dx}{\pi(1 + x^2)} = \frac{1}{\pi}\int_{-\infty}^{\infty} \frac{dx}{1 + x^2} = \frac{1}{\pi}\arctan|_{-\infty}^{\infty} = \frac{1}{\pi}(\frac{\pi}{2} - (-\frac{\pi}{2})) = 1$
@@ -265,41 +255,41 @@ $$
     
     **Решение:**
 
-    $$
-    \begin{array}{|c|c|c|c|c|}
-    \hline
-    \xi \backslash \eta & -1 & 0 & 1 & P_\xi\\
-    \hline
-    -1 & \frac{1}{8} & \frac{1}{12} & \frac{7}{24} & \frac{1}{2}\\
-    \hline
-    1 & \frac{1}{3} & \frac{1}{6} & 0 & \frac{1}{2}\\
-    \hline
-    P_\eta & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} & 1\\
-    \hline
-    \end{array}
-    $$
+$$
+\begin{array}{|c|c|c|c|c|}
+\hline
+\xi \backslash \eta & -1 & 0 & 1 & P_\xi\\
+\hline
+-1 & \frac{1}{8} & \frac{1}{12} & \frac{7}{24} & \frac{1}{2}\\
+\hline
+1 & \frac{1}{3} & \frac{1}{6} & 0 & \frac{1}{2}\\
+\hline
+P_\eta & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} & 1\\
+\hline
+\end{array}
+$$
 
-    Ряд распределения СВ $\xi$: 
-    $$
-    \begin{array}{|c|c|c|}
-    \hline
-    \xi & -1 & 1 \\
-    \hline
-    P & \frac{1}{2} & \frac{1}{2}  \\
-    \hline
-    \end{array}
-    $$
+Ряд распределения СВ $\xi$: 
+$$
+\begin{array}{|c|c|c|}
+\hline
+\xi & -1 & 1 \\
+\hline
+P & \frac{1}{2} & \frac{1}{2}  \\
+\hline
+\end{array}
+$$
 
-    Ряд распределения СВ $\eta$: 
-    $$
-    \begin{array}{|c|c|c|c|}
-    \hline
-    \eta & -1 & 0 & 1 \\
-    \hline
-    P & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} \\
-    \hline
-    \end{array}
-    $$
+Ряд распределения СВ $\eta$: 
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+\eta & -1 & 0 & 1 \\
+\hline
+P & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} \\
+\hline
+\end{array}
+$$
     
  - Вычислить математическое ожидание, ковариационную и корреляционную матрицы вектора $(\xi, \eta)$  
 
