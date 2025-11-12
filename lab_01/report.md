@@ -126,7 +126,7 @@ y \le x - 2, & x \le y
 \end{array} \right. 
 $$
 
-![](fig.svg)
+![](fig_01.svg)
 
 Найдем закрашенные площади: $23 * 23 * 0.5 + 22 * 11 = 506.5$.
 
@@ -492,13 +492,164 @@ $$
 - Вычислить математическое ожидание, ковариационную и корреляционную матрицы вектора $(\eta_1, \eta_2)$
   
     **Решение:**
+
+    1. 
+        $$
+        f_\xi = \left\lbrace \begin{array}{cl} 
+        \frac{1}{2\pi}, & \xi \in [-\pi, \pi]\\
+        0, & \text{else}
+        \end{array} \right.
+        $$
+
+    2. $\varphi(\xi) = \eta_1; \xi = \varphi^{-1}(\eta_1) = \psi(\eta_1)$
+     
+        ![](fig_02.svg)
+
+        $\eta_1 = \cos{\xi}$ не является монотонной на интервале $\xi \in [-\pi, \pi]$
+
+        $\xi: [-\pi, 0] - \cos\xi$ возрастает от $-1$ до $1$
+
+        $\xi: [0, \pi] - \cos\xi$ убывает от $1$ до $-1$  
+
+        $\xi_1 = \arccos{\eta_1} \text{ лежит в } [0, \pi]\\ \xi_2 = -\arccos{\eta_1} \text{ лежит в } [-\pi, 0]$
+
+    3. $f_{\eta_1}(\eta_1) = \Sigma f_\xi(\psi(\eta_1))|\psi'(\eta_1)| \text{ где } \psi(\eta_1) = \arccos{\eta_1}$
+
+        $\psi_1(\eta_1) = \arccos{\eta_1} \quad \psi_1'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_1^2}} \\ \psi_2(\eta_1) = -\arccos{\eta_1} \quad \psi_2'(\eta_1) = \frac{1}{\sqrt{1 - \eta_1^2}}$
+
+        $f_{\eta_1}(\eta_1) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_1^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_1^2}} = \frac{1}{\pi \sqrt{1 - \eta_1^2}}$
+
+        $$
+        f_{\eta_1}(\eta_1) = \left\lbrace \begin{array}{cl} 
+        \frac{1}{\pi \sqrt{1 - \eta_1^2}}, & \eta_1 \in [-1, 1]\\
+        0, & \text{else}
+        \end{array} \right.
+        $$
+
+    4. $\varphi(\xi) = \eta_2; \xi = \varphi^{-1}(\eta_2) = \psi(\eta_2)$
+
+        ![](fig_03.svg)    
+
+        $\eta_2 = \sin{\xi}$ не является монотонной на интервале $\xi \in [-\pi, \pi]$
+
+        $\xi: [-\pi, -\frac{\pi}{2}] - \sin\xi$ убывает от $0$ до $-1$
+
+        $\xi: [-\frac{\pi}{2}, \frac{\pi}{2}] - \sin\xi$ возрастает от $-1$ до $1$
+
+        $\xi: [\frac{\pi}{2}, \pi] - \sin\xi$ убывает от $1$ до $0$
+
+        $\xi_1 = \arcsin{\eta_2} \text{ лежит в } [-\frac{\pi}{2}, \frac{\pi}{2}]\\ \xi_2 = \pi -\arcsin{\eta_1} \text{ лежит в } [\frac{\pi}{2}, \frac{3\pi}{2}]$
+
+    5. $f_{\eta_2}(\eta_2) = \Sigma f_\xi(\psi(\eta_2))|\psi'(\eta_2)| \text{ где } \psi(\eta_2) = \arcsin{\eta_2}$ 
+
+        $\psi_1(\eta_2) = \arcsin{\eta_2} \quad \psi_1'(\eta_2) = \frac{1}{\sqrt{1 - \eta_2^2}} \\ \psi_2(\eta_2) = \pi -\arcsin{\eta_1} \quad \psi_2'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_2^2}}$
+
+        $f_{\eta_2}(\eta_2) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} = \frac{1}{\pi \sqrt{1 - \eta_2^2}}$
+        
+        $$
+        f_{\eta_2}(\eta_2) = \left\lbrace \begin{array}{cl} 
+        \frac{1}{\pi \sqrt{1 - \eta_2^2}}, & \eta_2 \in [-1, 1]\\
+        0, & \text{else}
+        \end{array} \right.
+        $$
+    
+    6. Математическое ожидание
+
+        $E\eta_1 = \int_{-1}^{1}\frac{\eta_1 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{1}{\pi} \int_{-1}^{1} \frac{\eta_1 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
+        f(-x) = -f(x) \\
+        \text{Подынтегральная функция является нечетной функцией} \\
+        \text{При симметричных пределах интегрирования интеграл равен 0}
+        \end{vmatrix} \Rightarrow E\eta_1 = 0$
+
+        Аналогично $E\eta_2 = 0$
+    
+    6. Дисперсия
+
+        $D\eta_1 = \int_{-1}^{1}\frac{\eta_1^2 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{2}{\pi}\int_{0}^{1}\frac{\eta_1^2 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
+        \eta_1 = \sin{t} \\
+        d\eta_1 = \cos{t}dt 
+        \end{vmatrix} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\frac{sin^2{t}\cos{t}dt}{\cos{t}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\sin^2{t}dt = \frac{1}{\pi}(t - \sin{t}\cos{t})|_0^{\frac{\pi}{2}} = \frac{1}{2}$ 
+
+        $D\eta_2 = \frac{1}{2}$
+    
+    7. Ковариация
+
+        $\text{cov}(\eta_1, \eta_2) = E(\eta_1\eta_2) - E\eta_1E\eta_2$
+
+        $\eta_1\eta_2 = \cos{\xi}\sin{\xi} \\ E(\eta_1\eta_2) = \int_{-\pi}^{\pi}\cos{\xi}\sin{\xi} f_\xi d\xi = \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{\xi}\sin{\xi}d\xi = \begin{vmatrix}
+        f(-x) = -f(x) \\
+        \text{Подынтегральная функция является нечетной функцией} \\
+        \text{При симметричных пределах интегрирования интеграл равен 0}
+        \end{vmatrix} \Rightarrow E(\eta_1\eta_2) = 0$
+
+        Ковариационная матрица
+        $$
+        \Sigma_{(\eta_1, \eta_2)} = 
+        \begin{pmatrix}
+            D\eta_1 & \text{cov}(\eta_1, \eta_2) \\
+            \text{cov}(\eta_1, \eta_2) & D\eta_2
+        \end{pmatrix}
+        $$
+
+        $$
+        \Sigma_{(\eta_1, \eta_2)} = 
+        \begin{pmatrix}
+            \frac{1}{2} & 0 \\
+            0 & \frac{1}{2}
+        \end{pmatrix}
+        $$
+
+        Корреляционная матрица
+
+        $$
+        P_{(\eta_1, \eta_2)} = 
+        \begin{pmatrix}
+            1 & 0 \\
+            0 & 1
+        \end{pmatrix}
+        $$
+
 - Исследовать $\eta_1$ и $\eta_2$ на независимость и некоррелированность
 
     **Решение:**
+
+    1. Так как $\text{cov}(\eta_1, \eta_2) - 0$, то они **некоррелированы**
+   
+   2. $\eta_1, \eta_2$ - **зависимы**
+   
+   ToDo
 
 ### 5. Найти плотность распределения суммы двух независимых случайных величин $\xi$ и $\eta$, если $\xi \sim \text{Exp}_2$ и $\eta \sim \text{U}_{0, 1}$ 
 
 **Решение:**
 
+$Y = \xi + \eta$ - случайная величина. Необходимо найти $f_y(y)$
+
+$f_\xi(\xi) = \left\lbrace \begin{array}{cl} 
+    2e^{-2\xi}, & \xi > 0\\
+    0, & \text{else}
+    \end{array} \right. \\
+f_\eta(\eta) = \left\lbrace \begin{array}{cl} 
+    1, & \eta \in [0; 1]\\
+    0, & \text{else}
+    \end{array} \right. 
+$
+
+![](fig_04.svg)
+
+$f_Y(\xi) = \int_{0}^{\infty}2e^{-2t}f_\eta(\xi - t)dt$
+
+$0 \le \xi - t \le 1$
+
+1. $\xi \in [0; 1], t \in [0; \xi] \\ \int_{0}^{\xi}2e^{-2t}dt = 1 - e^{-2\xi}$
+
+1. $\xi > 1, t \in [\xi - 1; \xi] \\ \int_{\xi - 1}^{\xi}2e^{-2t}dt = e^{2(1 - \xi)} - e^{-2\xi}$
 
 **Ответ:**
+$$
+f_y(\xi) = \left\lbrace \begin{array}{cl} 
+    1 - e^{-2\xi}, & \xi \in [0; 1]\\
+    e^{2(1 - \xi)} - e^{-2\xi}, & \xi > 1 \\
+    0, & \text{else}
+    \end{array} \right. 
+$$
