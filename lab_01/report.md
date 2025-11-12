@@ -649,9 +649,9 @@ $f_Y(\xi) = \int_{0}^{\infty}2e^{-2t}f_\eta(\xi - t)dt$
 
 $0 \le \xi - t \le 1$
 
-1. $\xi \in [0; 1], t \in [0; \xi] \newline{} \int_{0}^{\xi}2e^{-2t}dt = 1 - e^{-2\xi}$
+1. $\xi \in [0; 1], t \in [0; \xi] \newline \int_{0}^{\xi}2e^{-2t}dt = 1 - e^{-2\xi}$
 
-1. $\xi > 1, t \in [\xi - 1; \xi] \newline{} \int_{\xi - 1}^{\xi}2e^{-2t}dt = e^{2(1 - \xi)} - e^{-2\xi}$
+1. $\xi > 1, t \in [\xi - 1; \xi] \newline \int_{\xi - 1}^{\xi}2e^{-2t}dt = e^{2(1 - \xi)} - e^{-2\xi}$
 
 **Ответ:**
 
