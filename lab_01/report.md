@@ -269,7 +269,8 @@ P_\eta & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} & 1\\
 \end{array}
 $$
 
-Ряд распределения СВ $\xi$: 
+Ряд распределения СВ $\xi$:
+
 $$
 \begin{array}{|c|c|c|}
 \hline
@@ -281,6 +282,7 @@ P & \frac{1}{2} & \frac{1}{2}  \\
 $$
 
 Ряд распределения СВ $\eta$: 
+
 $$
 \begin{array}{|c|c|c|c|}
 \hline
@@ -293,66 +295,68 @@ $$
     
  - Вычислить математическое ожидание, ковариационную и корреляционную матрицы вектора $(\xi, \eta)$  
 
-    **Решение:**
+**Решение:**
 
-    $E\xi = \frac{1}{2}*(-1) + \frac{1}{2}*1 = 0$
+$E\xi = \frac{1}{2}*(-1) + \frac{1}{2}*1 = 0$
 
-    $E\eta = \frac{11}{24}*(-1) + \frac{7}{24}*1 = -\frac{1}{6}$
+$E\eta = \frac{11}{24}*(-1) + \frac{7}{24}*1 = -\frac{1}{6}$
 
-    $E(\xi, \eta) = (0, \frac{1}{6})$
+$E(\xi, \eta) = (0, \frac{1}{6})$
 
-    $\text{cov}(\xi, \eta) = \sum_{i}^{}\sum_{j}^{}(\xi_i - E\xi)(\eta_j - E\eta)p_{ij} = -\frac{1}{2}$
+$\text{cov}(\xi, \eta) = \sum_{i}^{}\sum_{j}^{}(\xi_i - E\xi)(\eta_j - E\eta)p_{ij} = -\frac{1}{2}$
 
-    Ковариационная матрица:
-    $$
-    \Sigma_{(\xi, \eta)} = 
-    \begin{pmatrix}
-        D\xi & \text{cov}(\xi, \eta) \\
-        \text{cov}(\eta, \xi) & D\eta
-    \end{pmatrix}
-    $$
+Ковариационная матрица:
 
-    $D\xi = E\xi^2 - (E\xi) ^ 2 = 1 * \frac{1}{2} + 1 * \frac{1}{2} - 0 = 1$
+$$
+\Sigma_{(\xi, \eta)} = 
+\begin{pmatrix}
+    D\xi & \text{cov}(\xi, \eta) \\
+    \text{cov}(\eta, \xi) & D\eta
+\end{pmatrix}
+$$
 
-    $D\eta = E\eta^2 - (E\eta) ^ 2 = 1 * \frac{11}{24} + 1 * \frac{7}{24} - \frac{1}{36} = \frac{13}{18}$
+$D\xi = E\xi^2 - (E\xi) ^ 2 = 1 * \frac{1}{2} + 1 * \frac{1}{2} - 0 = 1$
 
-    $$
-    \Sigma_{(\xi, \eta)} = 
-    \begin{pmatrix}
-        1 & -\frac{1}{2} \\
-        -\frac{1}{2} & \frac{13}{18}
-    \end{pmatrix}
-    $$
+$D\eta = E\eta^2 - (E\eta) ^ 2 = 1 * \frac{11}{24} + 1 * \frac{7}{24} - \frac{1}{36} = \frac{13}{18}$
 
-    Корреляционная матрица
-    $$
-    P_{\xi, \eta)} = 
-    \begin{pmatrix}
-        \rho(\xi, \xi) & \rho(\xi, \eta) \\
-        \rho(\eta, \xi) & \rho(\eta, \eta)
-    \end{pmatrix}
-    $$
+$$
+\Sigma_{(\xi, \eta)} = 
+\begin{pmatrix}
+    1 & -\frac{1}{2} \\
+    -\frac{1}{2} & \frac{13}{18}
+\end{pmatrix}
+$$
 
-    $\rho(\xi, \eta) = \frac{\text{cov}(\xi, \eta)}{\sqrt{D\xi D\eta}} = \frac{-\frac{1}{2}}{\sqrt{\frac{13}{18}}} = -\frac{3\sqrt{26}}{26}$
+Корреляционная матрица
 
-    $$
-    P_{(\xi, \eta)} = 
-    \begin{pmatrix}
-        1 & -\frac{3\sqrt{26}}{26} \\
-        -\frac{3\sqrt{26}}{26} & 1
-    \end{pmatrix}
-    $$
+$$
+P_{\xi, \eta)} = 
+\begin{pmatrix}
+    \rho(\xi, \xi) & \rho(\xi, \eta) \\
+    \rho(\eta, \xi) & \rho(\eta, \eta)
+\end{pmatrix}
+$$
+
+$\rho(\xi, \eta) = \frac{\text{cov}(\xi, \eta)}{\sqrt{D\xi D\eta}} = \frac{-\frac{1}{2}}{\sqrt{\frac{13}{18}}} = -\frac{3\sqrt{26}}{26}$
+
+$$
+P_{(\xi, \eta)} = 
+\begin{pmatrix}
+    1 & -\frac{3\sqrt{26}}{26} \\
+    -\frac{3\sqrt{26}}{26} & 1
+\end{pmatrix}
+$$
 
  - Исследовать $\xi$ и $\eta$ на независимость и некоррелированность
 
-    **Решение:**
+**Решение:**
 
-    1. Так как $\text{cov}(\xi, \eta) \neq 0$, то они **коррелированы**
+1. Так как $\text{cov}(\xi, \eta) \neq 0$, то они **коррелированы**
 
-    2. $\xi, \eta$ независимы, если: $p_{ij} = P(\xi = \xi_i) P(\eta = \eta_j)$
-    
-    $P(\xi = -1, \eta = -1) = \frac{1}{8} \\ P(\xi = -1) * P(\eta = -1) = \frac{1}{2} * \frac{11}{24} = \frac{11}{48} \\
-    \frac{11}{48} \neq \frac{1}{8} \Rightarrow \xi, \eta$ - **зависимы**
+2. $\xi, \eta$ независимы, если: $p_{ij} = P(\xi = \xi_i) P(\eta = \eta_j)$
+
+$P(\xi = -1, \eta = -1) = \frac{1}{8} \\ P(\xi = -1) * P(\eta = -1) = \frac{1}{2} * \frac{11}{24} = \frac{11}{48} \\
+\frac{11}{48} \neq \frac{1}{8} \Rightarrow \xi, \eta$ - **зависимы**
 
 
 ### 3. Пусть имеются два одинаковых тетраэдра с числами 1, 2, 3, 4 на гранях. Подкидываем оба и смотрим на выпавшие числа ξ1 и ξ2. Зададим следующие случайные величины:
@@ -366,240 +370,246 @@ $$
 
 - Cоставить таблицу совместного распределения $\phi_1$ и $\phi_2$
   
-    **Решение:**
-    
-    $\phi_1$ принимает значения: $2, 3, 4, 5, 6, 7, 8$
-    
-    $2 - (1, 2) \\ 3 - (1, 2), (2, 1) \\ 4 - (1, 3), (3, 1), (2, 2) \\ 5 - (1, 4), (4, 1), (2, 3), (3, 2) \\ 6 - (2, 4), (4, 2), (3, 3) \\ 7 - (3, 4), (4, 3) \\ 8 - (4, 4)$
+**Решение:**
 
-    $\phi_2$ принимает значения: $0, 1$
+$\phi_1$ принимает значения: $2, 3, 4, 5, 6, 7, 8$
 
-    $0 - (2, 3), (3, 2), (4, 3), (3, 4) \\ 1 - (1, 1), (1, 2), (1, 3), (1, 4), (2, 1), (2, 2), (2, 4), (3, 1), (3, 3), (4, 1), (4, 2), (4, 4)$
+$2 - (1, 2) \\ 3 - (1, 2), (2, 1) \\ 4 - (1, 3), (3, 1), (2, 2) \\ 5 - (1, 4), (4, 1), (2, 3), (3, 2) \\ 6 - (2, 4), (4, 2), (3, 3) \\ 7 - (3, 4), (4, 3) \\ 8 - (4, 4)$
 
-    $$
-    \begin{array}{|c|c|c|c|c|c|c|c|c|}
-    \hline
-    \phi_2 \backslash \phi_1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & P_{\phi_2}\\
-    \hline
-    0 & 0 & 0 & 0 & \frac{1}{8} & 0 & \frac{1}{8} & 0 & \frac{1}{4}\\
-    \hline
-    1 & \frac{1}{16} & \frac{2}{16} & \frac{3}{16} & \frac{1}{8} & \frac{3}{16} & 0 & \frac{1}{16} & \frac{3}{4}\\
-    \hline
-    P_{\phi_1} & \frac{1}{16} & \frac{2}{16} & \frac{3}{16} & \frac{4}{16} & \frac{3}{16} & \frac{2}{16} & \frac{1}{16} & 1\\
-    \hline
-    \end{array}
-    $$
+$\phi_2$ принимает значения: $0, 1$
+
+$0 - (2, 3), (3, 2), (4, 3), (3, 4) \\ 1 - (1, 1), (1, 2), (1, 3), (1, 4), (2, 1), (2, 2), (2, 4), (3, 1), (3, 3), (4, 1), (4, 2), (4, 4)$
+
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\phi_2 \backslash \phi_1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & P_{\phi_2}\\
+\hline
+0 & 0 & 0 & 0 & \frac{1}{8} & 0 & \frac{1}{8} & 0 & \frac{1}{4}\\
+\hline
+1 & \frac{1}{16} & \frac{2}{16} & \frac{3}{16} & \frac{1}{8} & \frac{3}{16} & 0 & \frac{1}{16} & \frac{3}{4}\\
+\hline
+P_{\phi_1} & \frac{1}{16} & \frac{2}{16} & \frac{3}{16} & \frac{4}{16} & \frac{3}{16} & \frac{2}{16} & \frac{1}{16} & 1\\
+\hline
+\end{array}
+$$
 
 - Найти маргинальные распределения $\phi_1$ и $\phi_2$
   
-    **Решение:**
+**Решение:**
 
-    Ряд распределения СВ $\phi_1$: 
-    $$
-    \begin{array}{|c|c|c|c|c|c|c|c|}
-    \hline
-    \phi_1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
-    \hline
-    P & \frac{1}{16} & \frac{2}{16} & \frac{3}{16} & \frac{4}{16} & \frac{3}{16} & \frac{2}{16} & \frac{1}{16} \\
-    \hline
-    \end{array}
-    $$
+Ряд распределения СВ $\phi_1$: 
 
-    Ряд распределения СВ $\phi_2$: 
-    $$
-    \begin{array}{|c|c|c|}
-    \hline
-    \phi_2 & 0 & 1 \\
-    \hline
-    P & \frac{1}{3} & \frac{3}{4} \\
-    \hline
-    \end{array}
-    $$
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+\phi_1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+\hline
+P & \frac{1}{16} & \frac{2}{16} & \frac{3}{16} & \frac{4}{16} & \frac{3}{16} & \frac{2}{16} & \frac{1}{16} \\
+\hline
+\end{array}
+$$
+
+Ряд распределения СВ $\phi_2$: 
+
+$$
+\begin{array}{|c|c|c|}
+\hline
+\phi_2 & 0 & 1 \\
+\hline
+P & \frac{1}{3} & \frac{3}{4} \\
+\hline
+\end{array}
+$$
 
 - Вычислить математическое ожидание, ковариационную и корреляционную матрицы вектора $(\phi_1, \phi_2)$
   
-    **Решение:**
+**Решение:**
 
-    $E\phi_1 = 2 * \frac{1}{16} + 3 * \frac{2}{16} + 4 * \frac{3}{16} + 5 * \frac{4}{16} + 6 * \frac{3}{16} + 7 * \frac{1}{16} + 8 * \frac{1}{16} = 5$
+$E\phi_1 = 2 * \frac{1}{16} + 3 * \frac{2}{16} + 4 * \frac{3}{16} + 5 * \frac{4}{16} + 6 * \frac{3}{16} + 7 * \frac{1}{16} + 8 * \frac{1}{16} = 5$
 
-    $E\phi_2 = \frac{3}{4}$
+$E\phi_2 = \frac{3}{4}$
 
-    $E(\phi_1, \phi_2) = (5, \frac{3}{4})$
+$E(\phi_1, \phi_2) = (5, \frac{3}{4})$
 
-    $\text{cov}(\phi_1, \phi_2) = \sum_{i}^{}\sum_{j}^{}(\phi_{1i} - E\phi_1)(\phi_{2j} - E\phi_2)p_{ij} = -\frac{1}{4}$
+$\text{cov}(\phi_1, \phi_2) = \sum_{i}^{}\sum_{j}^{}(\phi_{1i} - E\phi_1)(\phi_{2j} - E\phi_2)p_{ij} = -\frac{1}{4}$
 
-    Ковариационная матрица:
-    $$
-    \Sigma_{(\phi_1, \phi_2)} = 
-    \begin{pmatrix}
-        D\phi_1 & \text{cov}(\phi_1, \phi_2) \\
-        \text{cov}(\phi_1, \phi_2) & D\phi_2
-    \end{pmatrix}
-    $$
+Ковариационная матрица:
 
-    $D\phi_1 = E\phi_1^2 - (E\phi_1) ^ 2 = \frac{55}{2} - 25 = 2.5$
+$$
+\Sigma_{(\phi_1, \phi_2)} = 
+\begin{pmatrix}
+    D\phi_1 & \text{cov}(\phi_1, \phi_2) \\
+    \text{cov}(\phi_1, \phi_2) & D\phi_2
+\end{pmatrix}
+$$
 
-    $D\phi_2 = E\phi_2^2 - (E\phi_2) ^ 2 = \frac{3}{4} - \frac{9}{16} = \frac{3}{16}$
+$D\phi_1 = E\phi_1^2 - (E\phi_1) ^ 2 = \frac{55}{2} - 25 = 2.5$
 
-    $$
-    \Sigma_{(\xi, \eta)} = 
-    \begin{pmatrix}
-        2.5 & -\frac{1}{4} \\
-        -\frac{1}{4} & \frac{3}{16}
-    \end{pmatrix}
-    $$
+$D\phi_2 = E\phi_2^2 - (E\phi_2) ^ 2 = \frac{3}{4} - \frac{9}{16} = \frac{3}{16}$
 
-    Корреляционная матрица
-    $$
-    P_{(\phi_1, \phi_2)} = 
-    \begin{pmatrix}
-        \rho(\phi_1, \phi_1) & \rho(\phi_1, \phi_2) \\
-        \rho(\phi_2, \phi_1) & \rho(\phi_2, \phi_2)
-    \end{pmatrix}
-    $$
+$$
+\Sigma_{(\xi, \eta)} = 
+\begin{pmatrix}
+    2.5 & -\frac{1}{4} \\
+    -\frac{1}{4} & \frac{3}{16}
+\end{pmatrix}
+$$
 
-    $\rho(\phi_1, \phi_2) = \frac{\text{cov}(\phi_1, \phi_2)}{\sqrt{D\phi_1 D\phi_2}} = \frac{-\frac{1}{4}}{\sqrt{\frac{5}{2}* \frac{3}{16}}} = -\frac{\sqrt{30}}{15}$
+Корреляционная матрица:
 
-    $$
-    P_{(\phi_1, \phi_2)} = 
-    \begin{pmatrix}
-        1 & -\frac{\sqrt{30}}{15} \\
-        -\frac{\sqrt{30}}{15} & 1
-    \end{pmatrix}
-    $$
+$$
+P_{(\phi_1, \phi_2)} = 
+\begin{pmatrix}
+    \rho(\phi_1, \phi_1) & \rho(\phi_1, \phi_2) \\
+    \rho(\phi_2, \phi_1) & \rho(\phi_2, \phi_2)
+\end{pmatrix}
+$$
+
+$\rho(\phi_1, \phi_2) = \frac{\text{cov}(\phi_1, \phi_2)}{\sqrt{D\phi_1 D\phi_2}} = \frac{-\frac{1}{4}}{\sqrt{\frac{5}{2}* \frac{3}{16}}} = -\frac{\sqrt{30}}{15}$
+
+$$
+P_{(\phi_1, \phi_2)} = 
+\begin{pmatrix}
+    1 & -\frac{\sqrt{30}}{15} \\
+    -\frac{\sqrt{30}}{15} & 1
+\end{pmatrix}
+$$
 
 - Исследовать $\phi_1$ и $\phi_2$ на независимость и некоррелированность
 
-    **Решение:**
+**Решение:**
 
-    1. Так как $\text{cov}(\phi_1, \phi_2) \neq 0$, то они **ytкоррелированы**
+1. Так как $\text{cov}(\phi_1, \phi_2) \neq 0$, то они **ytкоррелированы**
 
-    2. $\phi_1, \phi_2$ независимы, если: $p_{ij} = P(\phi_1 = \phi_{1i}) P(\phi_2 = \phi_{2j})$
-    
-    $P(\phi_1 = 2, \phi_2 = 0) = 0 \\ P(\phi_1 = 2) * P(\phi_2 = 0) = \frac{1}{16} * \frac{1}{4} = \frac{1}{64} \\
-    0 \neq \frac{1}{64} \Rightarrow \phi_1, \phi_2$ - **зависимы**
+2. $\phi_1, \phi_2$ независимы, если: $p_{ij} = P(\phi_1 = \phi_{1i}) P(\phi_2 = \phi_{2j})$
+
+$P(\phi_1 = 2, \phi_2 = 0) = 0 \\ P(\phi_1 = 2) * P(\phi_2 = 0) = \frac{1}{16} * \frac{1}{4} = \frac{1}{64} \\
+0 \neq \frac{1}{64} \Rightarrow \phi_1, \phi_2$ - **зависимы**
 
 ### 4. Пусть $\xi \sim \text{U}_{-\pi, \pi}$ и $\eta_1 = \cos{\xi}, \eta_2 = \sin{\xi}$
 
 - Вычислить математическое ожидание, ковариационную и корреляционную матрицы вектора $(\eta_1, \eta_2)$
   
-    **Решение:**
+**Решение:**
 
-    1. 
-        $$
-        f_\xi = \left\lbrace \begin{array}{cl} 
-        \frac{1}{2\pi}, & \xi \in [-\pi, \pi]\\
-        0, & \text{else}
-        \end{array} \right.
-        $$
+1.
+ 
+$$
+f_\xi = \left\lbrace \begin{array}{cl} 
+\frac{1}{2\pi}, & \xi \in [-\pi, \pi]\\
+0, & \text{else}
+\end{array} \right.
+$$
 
-    2. $\varphi(\xi) = \eta_1; \xi = \varphi^{-1}(\eta_1) = \psi(\eta_1)$
-     
-        ![](data/fig_02.svg)
-
-        $\eta_1 = \cos{\xi}$ не является монотонной на интервале $\xi \in [-\pi, \pi]$
-
-        $\xi: [-\pi, 0] - \cos\xi$ возрастает от $-1$ до $1$
-
-        $\xi: [0, \pi] - \cos\xi$ убывает от $1$ до $-1$  
-
-        $\xi_1 = \arccos{\eta_1} \text{ лежит в } [0, \pi]\\ \xi_2 = -\arccos{\eta_1} \text{ лежит в } [-\pi, 0]$
-
-    3. $f_{\eta_1}(\eta_1) = \Sigma f_\xi(\psi(\eta_1))|\psi'(\eta_1)| \text{ где } \psi(\eta_1) = \arccos{\eta_1}$
-
-        $\psi_1(\eta_1) = \arccos{\eta_1} \quad \psi_1'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_1^2}} \\ \psi_2(\eta_1) = -\arccos{\eta_1} \quad \psi_2'(\eta_1) = \frac{1}{\sqrt{1 - \eta_1^2}}$
-
-        $f_{\eta_1}(\eta_1) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_1^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_1^2}} = \frac{1}{\pi \sqrt{1 - \eta_1^2}}$
-
-        $$
-        f_{\eta_1}(\eta_1) = \left\lbrace \begin{array}{cl} 
-        \frac{1}{\pi \sqrt{1 - \eta_1^2}}, & \eta_1 \in [-1, 1]\\
-        0, & \text{else}
-        \end{array} \right.
-        $$
-
-    4. $\varphi(\xi) = \eta_2; \xi = \varphi^{-1}(\eta_2) = \psi(\eta_2)$
-
-        ![](data/fig_03.svg)    
-
-        $\eta_2 = \sin{\xi}$ не является монотонной на интервале $\xi \in [-\pi, \pi]$
-
-        $\xi: [-\pi, -\frac{\pi}{2}] - \sin\xi$ убывает от $0$ до $-1$
-
-        $\xi: [-\frac{\pi}{2}, \frac{\pi}{2}] - \sin\xi$ возрастает от $-1$ до $1$
-
-        $\xi: [\frac{\pi}{2}, \pi] - \sin\xi$ убывает от $1$ до $0$
-
-        $\xi_1 = \arcsin{\eta_2} \text{ лежит в } [-\frac{\pi}{2}, \frac{\pi}{2}]\\ \xi_2 = \pi -\arcsin{\eta_1} \text{ лежит в } [\frac{\pi}{2}, \frac{3\pi}{2}]$
-
-    5. $f_{\eta_2}(\eta_2) = \Sigma f_\xi(\psi(\eta_2))|\psi'(\eta_2)| \text{ где } \psi(\eta_2) = \arcsin{\eta_2}$ 
-
-        $\psi_1(\eta_2) = \arcsin{\eta_2} \quad \psi_1'(\eta_2) = \frac{1}{\sqrt{1 - \eta_2^2}} \\ \psi_2(\eta_2) = \pi -\arcsin{\eta_1} \quad \psi_2'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_2^2}}$
-
-        $f_{\eta_2}(\eta_2) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} = \frac{1}{\pi \sqrt{1 - \eta_2^2}}$
-        
-        $$
-        f_{\eta_2}(\eta_2) = \left\lbrace \begin{array}{cl} 
-        \frac{1}{\pi \sqrt{1 - \eta_2^2}}, & \eta_2 \in [-1, 1]\\
-        0, & \text{else}
-        \end{array} \right.
-        $$
+2. $\varphi(\xi) = \eta_1; \xi = \varphi^{-1}(\eta_1) = \psi(\eta_1)$
     
-    6. Математическое ожидание
+![](data/fig_02.svg)
 
-        $E\eta_1 = \int_{-1}^{1}\frac{\eta_1 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{1}{\pi} \int_{-1}^{1} \frac{\eta_1 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
-        f(-x) = -f(x) \\
-        \text{Подынтегральная функция является нечетной функцией} \\
-        \text{При симметричных пределах интегрирования интеграл равен 0}
-        \end{vmatrix} \Rightarrow E\eta_1 = 0$
+$\eta_1 = \cos{\xi}$ не является монотонной на интервале $\xi \in [-\pi, \pi]$
 
-        Аналогично $E\eta_2 = 0$
-    
-    6. Дисперсия
+$\xi: [-\pi, 0] - \cos\xi$ возрастает от $-1$ до $1$
 
-        $D\eta_1 = \int_{-1}^{1}\frac{\eta_1^2 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{2}{\pi}\int_{0}^{1}\frac{\eta_1^2 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
-        \eta_1 = \sin{t} \\
-        d\eta_1 = \cos{t}dt 
-        \end{vmatrix} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\frac{sin^2{t}\cos{t}dt}{\cos{t}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\sin^2{t}dt = \frac{1}{\pi}(t - \sin{t}\cos{t})|_0^{\frac{\pi}{2}} = \frac{1}{2}$ 
+$\xi: [0, \pi] - \cos\xi$ убывает от $1$ до $-1$  
 
-        $D\eta_2 = \frac{1}{2}$
-    
-    7. Ковариация
+$\xi_1 = \arccos{\eta_1} \text{ лежит в } [0, \pi]\\ \xi_2 = -\arccos{\eta_1} \text{ лежит в } [-\pi, 0]$
 
-        $\text{cov}(\eta_1, \eta_2) = E(\eta_1\eta_2) - E\eta_1E\eta_2$
+3. $f_{\eta_1}(\eta_1) = \Sigma f_\xi(\psi(\eta_1))|\psi'(\eta_1)| \text{ где } \psi(\eta_1) = \arccos{\eta_1}$
 
-        $\eta_1\eta_2 = \cos{\xi}\sin{\xi} \\ E(\eta_1\eta_2) = \int_{-\pi}^{\pi}\cos{\xi}\sin{\xi} f_\xi d\xi = \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{\xi}\sin{\xi}d\xi = \begin{vmatrix}
-        f(-x) = -f(x) \\
-        \text{Подынтегральная функция является нечетной функцией} \\
-        \text{При симметричных пределах интегрирования интеграл равен 0}
-        \end{vmatrix} \Rightarrow E(\eta_1\eta_2) = 0$
+$\psi_1(\eta_1) = \arccos{\eta_1} \quad \psi_1'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_1^2}} \\ \psi_2(\eta_1) = -\arccos{\eta_1} \quad \psi_2'(\eta_1) = \frac{1}{\sqrt{1 - \eta_1^2}}$
 
-        Ковариационная матрица
-        $$
-        \Sigma_{(\eta_1, \eta_2)} = 
-        \begin{pmatrix}
-            D\eta_1 & \text{cov}(\eta_1, \eta_2) \\
-            \text{cov}(\eta_1, \eta_2) & D\eta_2
-        \end{pmatrix}
-        $$
+$f_{\eta_1}(\eta_1) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_1^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_1^2}} = \frac{1}{\pi \sqrt{1 - \eta_1^2}}$
 
-        $$
-        \Sigma_{(\eta_1, \eta_2)} = 
-        \begin{pmatrix}
-            \frac{1}{2} & 0 \\
-            0 & \frac{1}{2}
-        \end{pmatrix}
-        $$
+$$
+f_{\eta_1}(\eta_1) = \left\lbrace \begin{array}{cl} 
+\frac{1}{\pi \sqrt{1 - \eta_1^2}}, & \eta_1 \in [-1, 1]\\
+0, & \text{else}
+\end{array} \right.
+$$
 
-        Корреляционная матрица
+4. $\varphi(\xi) = \eta_2; \xi = \varphi^{-1}(\eta_2) = \psi(\eta_2)$
 
-        $$
-        P_{(\eta_1, \eta_2)} = 
-        \begin{pmatrix}
-            1 & 0 \\
-            0 & 1
-        \end{pmatrix}
-        $$
+![](data/fig_03.svg)    
+
+$\eta_2 = \sin{\xi}$ не является монотонной на интервале $\xi \in [-\pi, \pi]$
+
+$\xi: [-\pi, -\frac{\pi}{2}] - \sin\xi$ убывает от $0$ до $-1$
+
+$\xi: [-\frac{\pi}{2}, \frac{\pi}{2}] - \sin\xi$ возрастает от $-1$ до $1$
+
+$\xi: [\frac{\pi}{2}, \pi] - \sin\xi$ убывает от $1$ до $0$
+
+$\xi_1 = \arcsin{\eta_2} \text{ лежит в } [-\frac{\pi}{2}, \frac{\pi}{2}]\\ \xi_2 = \pi -\arcsin{\eta_1} \text{ лежит в } [\frac{\pi}{2}, \frac{3\pi}{2}]$
+
+5. $f_{\eta_2}(\eta_2) = \Sigma f_\xi(\psi(\eta_2))|\psi'(\eta_2)| \text{ где } \psi(\eta_2) = \arcsin{\eta_2}$ 
+
+$\psi_1(\eta_2) = \arcsin{\eta_2} \quad \psi_1'(\eta_2) = \frac{1}{\sqrt{1 - \eta_2^2}} \\ \psi_2(\eta_2) = \pi -\arcsin{\eta_1} \quad \psi_2'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_2^2}}$
+
+$f_{\eta_2}(\eta_2) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} = \frac{1}{\pi \sqrt{1 - \eta_2^2}}$
+
+$$
+f_{\eta_2}(\eta_2) = \left\lbrace \begin{array}{cl} 
+\frac{1}{\pi \sqrt{1 - \eta_2^2}}, & \eta_2 \in [-1, 1]\\
+0, & \text{else}
+\end{array} \right.
+$$
+
+6. Математическое ожидание
+
+$E\eta_1 = \int_{-1}^{1}\frac{\eta_1 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{1}{\pi} \int_{-1}^{1} \frac{\eta_1 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
+f(-x) = -f(x) \\
+\text{Подынтегральная функция является нечетной функцией} \\
+\text{При симметричных пределах интегрирования интеграл равен 0}
+\end{vmatrix} \Rightarrow E\eta_1 = 0$
+
+Аналогично $E\eta_2 = 0$
+
+6. Дисперсия
+
+$D\eta_1 = \int_{-1}^{1}\frac{\eta_1^2 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{2}{\pi}\int_{0}^{1}\frac{\eta_1^2 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
+\eta_1 = \sin{t} \\
+d\eta_1 = \cos{t}dt 
+\end{vmatrix} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\frac{sin^2{t}\cos{t}dt}{\cos{t}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\sin^2{t}dt = \frac{1}{\pi}(t - \sin{t}\cos{t})|_0^{\frac{\pi}{2}} = \frac{1}{2}$ 
+
+$D\eta_2 = \frac{1}{2}$
+
+7. Ковариация:
+
+$\text{cov}(\eta_1, \eta_2) = E(\eta_1\eta_2) - E\eta_1E\eta_2$
+
+$\eta_1\eta_2 = \cos{\xi}\sin{\xi} \\ E(\eta_1\eta_2) = \int_{-\pi}^{\pi}\cos{\xi}\sin{\xi} f_\xi d\xi = \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{\xi}\sin{\xi}d\xi = \begin{vmatrix}
+f(-x) = -f(x) \\
+\text{Подынтегральная функция является нечетной функцией} \\
+\text{При симметричных пределах интегрирования интеграл равен 0}
+\end{vmatrix} \Rightarrow E(\eta_1\eta_2) = 0$
+
+Ковариационная матрица:
+
+$$
+\Sigma_{(\eta_1, \eta_2)} = 
+\begin{pmatrix}
+    D\eta_1 & \text{cov}(\eta_1, \eta_2) \\
+    \text{cov}(\eta_1, \eta_2) & D\eta_2
+\end{pmatrix}
+$$
+
+$$
+\Sigma_{(\eta_1, \eta_2)} = 
+\begin{pmatrix}
+    \frac{1}{2} & 0 \\
+    0 & \frac{1}{2}
+\end{pmatrix}
+$$
+
+Корреляционная матрица:
+
+$$
+P_{(\eta_1, \eta_2)} = 
+\begin{pmatrix}
+    1 & 0 \\
+    0 & 1
+\end{pmatrix}
+$$
 
 - Исследовать $\eta_1$ и $\eta_2$ на независимость и некоррелированность
 
