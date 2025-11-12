@@ -578,11 +578,11 @@ $$
 
 Математическое ожидание:
 
-$E\eta_1 = \int_{-1}^{1}\frac{\eta_1 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{1}{\pi} \int_{-1}^{1} \frac{\eta_1 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
+$$E\eta_1 = \int_{-1}^{1}\frac{\eta_1 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{1}{\pi} \int_{-1}^{1} \frac{\eta_1 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
 f(-x) = -f(x) \\
 \text{Подынтегральная функция является нечетной функцией} \\
 \text{При симметричных пределах интегрирования интеграл равен 0}
-\end{vmatrix} \Rightarrow E\eta_1 = 0$
+\end{vmatrix} \Rightarrow E\eta_1 = 0$$
 
 Аналогично $E\eta_2 = 0$
 
