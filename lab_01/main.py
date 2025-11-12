@@ -44,7 +44,7 @@ plt.ylim(-2, 27)
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
-plt.savefig('fig_01.svg')
+plt.savefig('data/fig_01.svg')
 
 # Очищаем фигуру для второго графика
 plt.clf()  # или plt.close()
@@ -75,7 +75,7 @@ plt.grid(True, alpha=0.3)
 plt.legend()
 
 # Сохраняем второй график отдельно
-plt.savefig('fig_02.svg')
+plt.savefig('data/fig_02.svg')
 
 # Очищаем фигуру для второго графика
 plt.clf()  # или plt.close()
@@ -106,7 +106,7 @@ plt.grid(True, alpha=0.3)
 plt.legend()
 
 # Сохраняем второй график отдельно
-plt.savefig('fig_03.svg')
+plt.savefig('data/fig_03.svg')
 
 plt.clf()
 
@@ -155,8 +155,8 @@ plt.annotate("", xy=(0, 5), xytext=(0, 0),
 
 
 # Подписи осей
-plt.text(6.2, -0.5, 'ξ', fontsize=12)
-plt.text(-0.5, 5.2, 't', fontsize=12)
+plt.text(6.2, -0.25, 'ξ', fontsize=12)
+plt.text(-0.25, 5.2, 't', fontsize=12)
 
 
 # Настройки графика
@@ -168,4 +168,4 @@ plt.ylabel('t')
 plt.legend()
 
 
-plt.savefig('fig_04.svg')
+plt.savefig('data/fig_04.svg')

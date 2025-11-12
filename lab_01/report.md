@@ -30,6 +30,7 @@
         $P(A) = \frac{1}{2}, \ P(B) = \frac{1}{2}$
 
         $P(AB) = P({1}) = \frac{1}{4}, \ P(A)P(B) = \frac{1}{4} \Rightarrow A, B - \text{независимые}$  
+        
     - $A = \left\lbrace1, 2, 3\right\rbrace, B = \left\lbrace1, 2\right\rbrace$
         
         $P(A) = \frac{3}{4}, \ P(B) = \frac{1}{2}$
@@ -103,8 +104,6 @@
 
 ### 4. Два парохода должны подойти к одному и тому же причалу независимо друг от друга и равновозможно в течение суток. Определить вероятность того, что одному из них придется ожидать освобождения причала, если время стоянки первого парохода - 1 час, а второго - 2 часа.
 
-Вероятность того, что одному из них придется ожидать освобождения причала = 1 - вероятность того, что никто из них не будет ждать освобождения причала
-
 **Решение:**
 
 Пусть $x$ - момент прибытия 1го корабля, $y$ - 2го; $x, y \in [0, 24]$.
@@ -162,14 +161,14 @@ $$
     Самолет был сбит с 1го раза, то есть сразу попали в **часть 1**.
 
     $P(A | m = 1) = p_1^1p_2^0p_3^0p_0^0 = p_1$
-3. m = 2
+2. m = 2
    
    Самолет был сбит со 2го раза, то есть:
    - 2 раза били в **часть 2**
    - хотя бы одно попадание в **часть 1**
   
     $P(A | m = 2) = p_2 ^ 2 + 2(1 - p_1)p_1 = 2p_1 - p_1^2 + p_2 ^ 2$
-4. m = 3
+3. m = 3
    
    Рассмотрим собитие $\bar{A}: \left\lbrace X_1 = 0 \right\rbrace \cup \left\lbrace X_2 \le 1\right\rbrace \cup \left\lbrace X_3 \le 2\right\rbrace$
 
@@ -186,7 +185,7 @@ $$
         $P = \sum_{k = 0}^{2} \frac{3!}{1!k!(2-k)!}p_{2}p_{0}^{k}p_{3}^{2 - k}$ 
     
     $P(A | m = 3) = 1 - \sum_{k = 0}^{2} \frac{3!}{k!(3-k)!} p_{3}^{k}p_{0}^{3 - k} - \sum_{k = 0}^{2} \frac{3!}{1!k!(2-k)!}p_{2}p_{0}^{k}p_{3}^{2 - k}$
-5. m = 4
+4. m = 4
     
     $\bar{A}: X_1 = 0, X_2 \le 1, X_3 \le 2$
 
@@ -204,7 +203,7 @@ $$
     $P(A | m = 4) = 1 - \sum_{k = 0}^{2} \frac{4!}{k!(4-k)!} p_{3}^{k}p_{0}^{3 - k} - \sum_{k = 0}^{2} \frac{4!}{1!k!(3-k)!}p_{2}p_{0}^{k}p_{3}^{3 - k}$
 
 **Ответ:**
-1. $P(A | m = 1) = p_1^1p_2^0p_3^0p_0^0 = p_1$
+1. $P(A | m = 1) = p_1$
 2. $P(A | m = 2) = p_2 ^ 2 + 2(1 - p_1)p_1 = 2p_1 - p_1^2 + p_2 ^ 2$
 3. $P(A | m = 3) = 1 - \sum_{k = 0}^{2} \frac{3!}{k!(3-k)!} p_{3}^{k}p_{0}^{3 - k} - \sum_{k = 0}^{2} \frac{3!}{1!k!(2-k)!}p_{2}p_{0}^{k}p_{3}^{2 - k}$
 4. $P(A | m = 4) = 1 - \sum_{k = 0}^{2} \frac{4!}{k!(4-k)!} p_{3}^{k}p_{0}^{3 - k} - \sum_{k = 0}^{2} \frac{4!}{1!k!(3-k)!}p_{2}p_{0}^{k}p_{3}^{3 - k}$
@@ -255,108 +254,108 @@ $$
     
     **Решение:**
 
-$$
-\begin{array}{|c|c|c|c|c|}
-\hline
-\xi \backslash \eta & -1 & 0 & 1 & P_\xi\\
-\hline
--1 & \frac{1}{8} & \frac{1}{12} & \frac{7}{24} & \frac{1}{2}\\
-\hline
-1 & \frac{1}{3} & \frac{1}{6} & 0 & \frac{1}{2}\\
-\hline
-P_\eta & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} & 1\\
-\hline
-\end{array}
-$$
+    $$
+    \begin{array}{|c|c|c|c|c|}
+    \hline
+    \xi \backslash \eta & -1 & 0 & 1 & P_\xi\\
+    \hline
+    -1 & \frac{1}{8} & \frac{1}{12} & \frac{7}{24} & \frac{1}{2}\\
+    \hline
+    1 & \frac{1}{3} & \frac{1}{6} & 0 & \frac{1}{2}\\
+    \hline
+    P_\eta & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} & 1\\
+    \hline
+    \end{array}
+    $$
 
-Ряд распределения СВ $\xi$:
+    Ряд распределения СВ $\xi$:
 
-$$
-\begin{array}{|c|c|c|}
-\hline
-\xi & -1 & 1 \\
-\hline
-P & \frac{1}{2} & \frac{1}{2}  \\
-\hline
-\end{array}
-$$
+    $$
+    \begin{array}{|c|c|c|}
+    \hline
+    \xi & -1 & 1 \\
+    \hline
+    P & \frac{1}{2} & \frac{1}{2}  \\
+    \hline
+    \end{array}
+    $$
 
-Ряд распределения СВ $\eta$: 
+    Ряд распределения СВ $\eta$: 
 
-$$
-\begin{array}{|c|c|c|c|}
-\hline
-\eta & -1 & 0 & 1 \\
-\hline
-P & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} \\
-\hline
-\end{array}
-$$
+    $$
+    \begin{array}{|c|c|c|c|}
+    \hline
+    \eta & -1 & 0 & 1 \\
+    \hline
+    P & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} \\
+    \hline
+    \end{array}
+    $$
     
  - Вычислить математическое ожидание, ковариационную и корреляционную матрицы вектора $(\xi, \eta)$  
 
-**Решение:**
+    **Решение:**
 
-$E\xi = \frac{1}{2}*(-1) + \frac{1}{2}*1 = 0$
+    $E\xi = \frac{1}{2}*(-1) + \frac{1}{2}*1 = 0$
 
-$E\eta = \frac{11}{24}*(-1) + \frac{7}{24}*1 = -\frac{1}{6}$
+    $E\eta = \frac{11}{24}*(-1) + \frac{7}{24}*1 = -\frac{1}{6}$
 
-$E(\xi, \eta) = (0, \frac{1}{6})$
+    $E(\xi, \eta) = (0, \frac{1}{6})$
 
-$\text{cov}(\xi, \eta) = \sum_{i}^{}\sum_{j}^{}(\xi_i - E\xi)(\eta_j - E\eta)p_{ij} = -\frac{1}{2}$
+    $\text{cov}(\xi, \eta) = \sum_{i}^{}\sum_{j}^{}(\xi_i - E\xi)(\eta_j - E\eta)p_{ij} = -\frac{1}{2}$
 
-Ковариационная матрица:
+    Ковариационная матрица:
 
-$$
-\Sigma_{(\xi, \eta)} = 
-\begin{pmatrix}
-    D\xi & \text{cov}(\xi, \eta) \\
-    \text{cov}(\eta, \xi) & D\eta
-\end{pmatrix}
-$$
+    $$
+    \Sigma_{(\xi, \eta)} = 
+    \begin{pmatrix}
+        D\xi & \text{cov}(\xi, \eta) \\
+        \text{cov}(\eta, \xi) & D\eta
+    \end{pmatrix}
+    $$
 
-$D\xi = E\xi^2 - (E\xi) ^ 2 = 1 * \frac{1}{2} + 1 * \frac{1}{2} - 0 = 1$
+    $D\xi = E\xi^2 - (E\xi) ^ 2 = 1 * \frac{1}{2} + 1 * \frac{1}{2} - 0 = 1$
 
-$D\eta = E\eta^2 - (E\eta) ^ 2 = 1 * \frac{11}{24} + 1 * \frac{7}{24} - \frac{1}{36} = \frac{13}{18}$
+    $D\eta = E\eta^2 - (E\eta) ^ 2 = 1 * \frac{11}{24} + 1 * \frac{7}{24} - \frac{1}{36} = \frac{13}{18}$
 
-$$
-\Sigma_{(\xi, \eta)} = 
-\begin{pmatrix}
-    1 & -\frac{1}{2} \\
-    -\frac{1}{2} & \frac{13}{18}
-\end{pmatrix}
-$$
+    $$
+    \Sigma_{(\xi, \eta)} = 
+    \begin{pmatrix}
+        1 & -\frac{1}{2} \\
+        -\frac{1}{2} & \frac{13}{18}
+    \end{pmatrix}
+    $$
 
-Корреляционная матрица
+    Корреляционная матрица
 
-$$
-P_{\xi, \eta)} = 
-\begin{pmatrix}
-    \rho(\xi, \xi) & \rho(\xi, \eta) \\
-    \rho(\eta, \xi) & \rho(\eta, \eta)
-\end{pmatrix}
-$$
+    $$
+    P_{\xi, \eta)} = 
+    \begin{pmatrix}
+        \rho(\xi, \xi) & \rho(\xi, \eta) \\
+        \rho(\eta, \xi) & \rho(\eta, \eta)
+    \end{pmatrix}
+    $$
 
-$\rho(\xi, \eta) = \frac{\text{cov}(\xi, \eta)}{\sqrt{D\xi D\eta}} = \frac{-\frac{1}{2}}{\sqrt{\frac{13}{18}}} = -\frac{3\sqrt{26}}{26}$
+    $\rho(\xi, \eta) = \frac{\text{cov}(\xi, \eta)}{\sqrt{D\xi D\eta}} = \frac{-\frac{1}{2}}{\sqrt{\frac{13}{18}}} = -\frac{3\sqrt{26}}{26}$
 
-$$
-P_{(\xi, \eta)} = 
-\begin{pmatrix}
-    1 & -\frac{3\sqrt{26}}{26} \\
-    -\frac{3\sqrt{26}}{26} & 1
-\end{pmatrix}
-$$
+    $$
+    P_{(\xi, \eta)} = 
+    \begin{pmatrix}
+        1 & -\frac{3\sqrt{26}}{26} \\
+        -\frac{3\sqrt{26}}{26} & 1
+    \end{pmatrix}
+    $$
 
  - Исследовать $\xi$ и $\eta$ на независимость и некоррелированность
 
-**Решение:**
+    **Решение:**
 
-1. Так как $\text{cov}(\xi, \eta) \neq 0$, то они **коррелированы**
+    1. Так как $\text{cov}(\xi, \eta) \neq 0$, то они **коррелированы**
 
-2. $\xi, \eta$ независимы, если: $p_{ij} = P(\xi = \xi_i) P(\eta = \eta_j)$
+    2. $\xi, \eta$ независимы, если: $p_{ij} = P(\xi = \xi_i) P(\eta = \eta_j)$
 
-$P(\xi = -1, \eta = -1) = \frac{1}{8} \\ P(\xi = -1) * P(\eta = -1) = \frac{1}{2} * \frac{11}{24} = \frac{11}{48} \\
-\frac{11}{48} \neq \frac{1}{8} \Rightarrow \xi, \eta$ - **зависимы**
+    $P(\xi = -1, \eta = -1) = \frac{1}{8} \\ P(\xi = -1) * P(\eta = -1) = \frac{1}{2} * \frac{11}{24} = \frac{11}{48} \\
+    \frac{11}{48} \neq \frac{1}{8} \Rightarrow \xi, \eta$ - **зависимы**
 
 
 ### 3. Пусть имеются два одинаковых тетраэдра с числами 1, 2, 3, 4 на гранях. Подкидываем оба и смотрим на выпавшие числа ξ1 и ξ2. Зададим следующие случайные величины:
