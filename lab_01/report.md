@@ -250,113 +250,115 @@ $$
 \end{array}
 $$
 
- - Найти маргинальные распределения $\xi$ и $\eta$
+- Найти маргинальные распределения $\xi$ и $\eta$
     
     **Решение:**
 
-    $$
-    \begin{array}{|c|c|c|c|c|}
-    \hline
-    \xi \backslash \eta & -1 & 0 & 1 & P_\xi\\
-    \hline
-    -1 & \frac{1}{8} & \frac{1}{12} & \frac{7}{24} & \frac{1}{2}\\
-    \hline
-    1 & \frac{1}{3} & \frac{1}{6} & 0 & \frac{1}{2}\\
-    \hline
-    P_\eta & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} & 1\\
-    \hline
-    \end{array}
-    $$
+$$
+\begin{array}{|c|c|c|c|c|}
+\hline
+\xi \backslash \eta & -1 & 0 & 1 & P_\xi\\
+\hline
+-1 & \frac{1}{8} & \frac{1}{12} & \frac{7}{24} & \frac{1}{2}\\
+\hline
+1 & \frac{1}{3} & \frac{1}{6} & 0 & \frac{1}{2}\\
+\hline
+P_\eta & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} & 1\\
+\hline
+\end{array}
+$$
 
-    Ряд распределения СВ $\xi$:
+Ряд распределения СВ $\xi$:
 
-    $$
-    \begin{array}{|c|c|c|}
-    \hline
-    \xi & -1 & 1 \\
-    \hline
-    P & \frac{1}{2} & \frac{1}{2}  \\
-    \hline
-    \end{array}
-    $$
+$$
+\begin{array}{|c|c|c|}
+\hline
+\xi & -1 & 1 \\
+\hline
+P & \frac{1}{2} & \frac{1}{2}  \\
+\hline
+\end{array}
+$$
 
-    Ряд распределения СВ $\eta$: 
+Ряд распределения СВ $\eta$: 
 
-    $$
-    \begin{array}{|c|c|c|c|}
-    \hline
-    \eta & -1 & 0 & 1 \\
-    \hline
-    P & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} \\
-    \hline
-    \end{array}
-    $$
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+\eta & -1 & 0 & 1 \\
+\hline
+P & \frac{11}{24} & \frac{1}{4} & \frac{7}{24} \\
+\hline
+\end{array}
+$$
     
- - Вычислить математическое ожидание, ковариационную и корреляционную матрицы вектора $(\xi, \eta)$  
+- Вычислить математическое ожидание, ковариационную и корреляционную матрицы вектора $(\xi, \eta)$  
 
-    **Решение:**
+**Решение:**
 
-    $E\xi = \frac{1}{2}*(-1) + \frac{1}{2}*1 = 0$
+$E\xi = \frac{1}{2}*(-1) + \frac{1}{2}*1 = 0$
 
-    $E\eta = \frac{11}{24}*(-1) + \frac{7}{24}*1 = -\frac{1}{6}$
+$E\eta = \frac{11}{24}*(-1) + \frac{7}{24}*1 = -\frac{1}{6}$
 
-    $E(\xi, \eta) = (0, \frac{1}{6})$
+$E(\xi, \eta) = (0, \frac{1}{6})$
 
-    $\text{cov}(\xi, \eta) = \sum_{i}^{}\sum_{j}^{}(\xi_i - E\xi)(\eta_j - E\eta)p_{ij} = -\frac{1}{2}$
+$\text{cov}(\xi, \eta) = \sum_{i}^{}\sum_{j}^{}(\xi_i - E\xi)(\eta_j - E\eta)p_{ij} = -\frac{1}{2}$
 
-    Ковариационная матрица:
+Ковариационная матрица:
 
-    $$
-    \Sigma_{(\xi, \eta)} = 
-    \begin{pmatrix}
-        D\xi & \text{cov}(\xi, \eta) \\
-        \text{cov}(\eta, \xi) & D\eta
-    \end{pmatrix}
-    $$
+$$
+\Sigma_{(\xi, \eta)} = 
+\begin{pmatrix}
+    D\xi & \text{cov}(\xi, \eta) \\
+    \text{cov}(\eta, \xi) & D\eta
+\end{pmatrix}
+$$
 
-    $D\xi = E\xi^2 - (E\xi) ^ 2 = 1 * \frac{1}{2} + 1 * \frac{1}{2} - 0 = 1$
+$D\xi = E\xi^2 - (E\xi) ^ 2 = 1 * \frac{1}{2} + 1 * \frac{1}{2} - 0 = 1$
 
-    $D\eta = E\eta^2 - (E\eta) ^ 2 = 1 * \frac{11}{24} + 1 * \frac{7}{24} - \frac{1}{36} = \frac{13}{18}$
+$D\eta = E\eta^2 - (E\eta) ^ 2 = 1 * \frac{11}{24} + 1 * \frac{7}{24} - \frac{1}{36} = \frac{13}{18}$
 
-    $$
-    \Sigma_{(\xi, \eta)} = 
-    \begin{pmatrix}
-        1 & -\frac{1}{2} \\
-        -\frac{1}{2} & \frac{13}{18}
-    \end{pmatrix}
-    $$
+$$
+\Sigma_{(\xi, \eta)} = 
+\begin{pmatrix}
+    1 & -\frac{1}{2} \\
+    -\frac{1}{2} & \frac{13}{18}
+\end{pmatrix}
+$$
 
-    Корреляционная матрица
+Корреляционная матрица
 
-    $$
-    P_{\xi, \eta)} = 
-    \begin{pmatrix}
-        \rho(\xi, \xi) & \rho(\xi, \eta) \\
-        \rho(\eta, \xi) & \rho(\eta, \eta)
-    \end{pmatrix}
-    $$
+$$
+P_{\xi, \eta)} = 
+\begin{pmatrix}
+    \rho(\xi, \xi) & \rho(\xi, \eta) \\
+    \rho(\eta, \xi) & \rho(\eta, \eta)
+\end{pmatrix}
+$$
 
-    $\rho(\xi, \eta) = \frac{\text{cov}(\xi, \eta)}{\sqrt{D\xi D\eta}} = \frac{-\frac{1}{2}}{\sqrt{\frac{13}{18}}} = -\frac{3\sqrt{26}}{26}$
+$\rho(\xi, \eta) = \frac{\text{cov}(\xi, \eta)}{\sqrt{D\xi D\eta}} = \frac{-\frac{1}{2}}{\sqrt{\frac{13}{18}}} = -\frac{3\sqrt{26}}{26}$
 
-    $$
-    P_{(\xi, \eta)} = 
-    \begin{pmatrix}
-        1 & -\frac{3\sqrt{26}}{26} \\
-        -\frac{3\sqrt{26}}{26} & 1
-    \end{pmatrix}
-    $$
+$$
+P_{(\xi, \eta)} = 
+\begin{pmatrix}
+    1 & -\frac{3\sqrt{26}}{26} \\
+    -\frac{3\sqrt{26}}{26} & 1
+\end{pmatrix}
+$$
 
- - Исследовать $\xi$ и $\eta$ на независимость и некоррелированность
+- Исследовать $\xi$ и $\eta$ на независимость и некоррелированность
 
-    **Решение:**
+**Решение:**
 
-    1. Так как $\text{cov}(\xi, \eta) \neq 0$, то они **коррелированы**
+1. Так как $\text{cov}(\xi, \eta) \neq 0$, то они **коррелированы**
 
-    2. $\xi, \eta$ независимы, если: $p_{ij} = P(\xi = \xi_i) P(\eta = \eta_j)$
+2. $\xi, \eta$ независимы, если: $p_{ij} = P(\xi = \xi_i) P(\eta = \eta_j)$
 
-    $P(\xi = -1, \eta = -1) = \frac{1}{8} \\ P(\xi = -1) * P(\eta = -1) = \frac{1}{2} * \frac{11}{24} = \frac{11}{48} \\
-    \frac{11}{48} \neq \frac{1}{8} \Rightarrow \xi, \eta$ - **зависимы**
+$P(\xi = -1, \eta = -1) = \frac{1}{8}$
 
+$P(\xi = -1) * P(\eta = -1) = \frac{1}{2} * \frac{11}{24} = \frac{11}{48} $
+
+$\frac{11}{48} \neq \frac{1}{8} \Rightarrow \xi, \eta$ - **зависимы**
 
 ### 3. Пусть имеются два одинаковых тетраэдра с числами 1, 2, 3, 4 на гранях. Подкидываем оба и смотрим на выпавшие числа ξ1 и ξ2. Зададим следующие случайные величины:
 
@@ -373,11 +375,25 @@ $$
 
 $\phi_1$ принимает значения: $2, 3, 4, 5, 6, 7, 8$
 
-$2 - (1, 2) \\ 3 - (1, 2), (2, 1) \\ 4 - (1, 3), (3, 1), (2, 2) \\ 5 - (1, 4), (4, 1), (2, 3), (3, 2) \\ 6 - (2, 4), (4, 2), (3, 3) \\ 7 - (3, 4), (4, 3) \\ 8 - (4, 4)$
+$2 - (1, 2)$
+
+$3 - (1, 2), (2, 1)$
+
+$4 - (1, 3), (3, 1), (2, 2)$
+
+$5 - (1, 4), (4, 1), (2, 3), (3, 2)$
+
+$6 - (2, 4), (4, 2), (3, 3)$
+
+$7 - (3, 4), (4, 3)$
+
+$8 - (4, 4)$
 
 $\phi_2$ принимает значения: $0, 1$
 
-$0 - (2, 3), (3, 2), (4, 3), (3, 4) \\ 1 - (1, 1), (1, 2), (1, 3), (1, 4), (2, 1), (2, 2), (2, 4), (3, 1), (3, 3), (4, 1), (4, 2), (4, 4)$
+$0 - (2, 3), (3, 2), (4, 3), (3, 4)$
+
+$1 - (1, 1), (1, 2), (1, 3), (1, 4), (2, 1), (2, 2), (2, 4), (3, 1), (3, 3), (4, 1), (4, 2), (4, 4)$
 
 $$
 \begin{array}{|c|c|c|c|c|c|c|c|c|}
@@ -465,7 +481,7 @@ P_{(\phi_1, \phi_2)} =
 \end{pmatrix}
 $$
 
-$\rho(\phi_1, \phi_2) = \frac{\text{cov}(\phi_1, \phi_2)}{\sqrt{D\phi_1 D\phi_2}} = \frac{-\frac{1}{4}}{\sqrt{\frac{5}{2}* \frac{3}{16}}} = -\frac{\sqrt{30}}{15}$
+$\rho(\phi_1, \phi_2) = \frac{\text{cov}(\phi_1, \phi_2)}{\sqrt{D\phi_1 D\phi_2}} = \frac{-\frac{1}{4}}{\sqrt{\frac{5}{2} * \frac{3}{16}}} = -\frac{\sqrt{30}}{15}$
 
 $$
 P_{(\phi_1, \phi_2)} = 
@@ -511,11 +527,15 @@ $\xi: [-\pi, 0] - \cos\xi$ возрастает от $-1$ до $1$
 
 $\xi: [0, \pi] - \cos\xi$ убывает от $1$ до $-1$  
 
-$\xi_1 = \arccos{\eta_1} \text{ лежит в } [0, \pi]\\ \xi_2 = -\arccos{\eta_1} \text{ лежит в } [-\pi, 0]$
+$\xi_1 = \arccos{\eta_1} \text{ лежиТ в } [0, \pi]$
+
+$\xi_2 = -\arccos{\eta_1} \text{ лежит в } [-\pi, 0]$
 
 3. $f_{\eta_1}(\eta_1) = \Sigma f_\xi(\psi(\eta_1))|\psi'(\eta_1)| \text{ где } \psi(\eta_1) = \arccos{\eta_1}$
 
-$\psi_1(\eta_1) = \arccos{\eta_1} \quad \psi_1'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_1^2}} \\ \psi_2(\eta_1) = -\arccos{\eta_1} \quad \psi_2'(\eta_1) = \frac{1}{\sqrt{1 - \eta_1^2}}$
+$\psi_1(\eta_1) = \arccos{\eta_1} \quad \psi_1'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_1^2}}$
+
+$\psi_2(\eta_1) = -\arccos{\eta_1} \quad \psi_2'(\eta_1) = \frac{1}{\sqrt{1 - \eta_1^2}}$
 
 $f_{\eta_1}(\eta_1) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_1^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_1^2}} = \frac{1}{\pi \sqrt{1 - \eta_1^2}}$
 
@@ -538,11 +558,14 @@ $\xi: [-\frac{\pi}{2}, \frac{\pi}{2}] - \sin\xi$ возрастает от $-1$ 
 
 $\xi: [\frac{\pi}{2}, \pi] - \sin\xi$ убывает от $1$ до $0$
 
-$\xi_1 = \arcsin{\eta_2} \text{ лежит в } [-\frac{\pi}{2}, \frac{\pi}{2}]\\ \xi_2 = \pi -\arcsin{\eta_1} \text{ лежит в } [\frac{\pi}{2}, \frac{3\pi}{2}]$
+$\xi_1 = \arcsin{\eta_2} \text{ лежит в } [-\frac{\pi}{2}, \frac{\pi}{2}] $
+
+$xi_2 = \pi -\arcsin{\eta_1} \text{ лежит в } [\frac{\pi}{2}, \frac{3\pi}{2}]$
 
 5. $f_{\eta_2}(\eta_2) = \Sigma f_\xi(\psi(\eta_2))|\psi'(\eta_2)| \text{ где } \psi(\eta_2) = \arcsin{\eta_2}$ 
 
-$\psi_1(\eta_2) = \arcsin{\eta_2} \quad \psi_1'(\eta_2) = \frac{1}{\sqrt{1 - \eta_2^2}} \\ \psi_2(\eta_2) = \pi -\arcsin{\eta_1} \quad \psi_2'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_2^2}}$
+$\psi_1(\eta_2) = \arcsin{\eta_2} \quad \psi_1'(\eta_2) = \frac{1}{\sqrt{1 - \eta_2^2}}$
+$\psi_2(\eta_2) = \pi -\arcsin{\eta_1} \quad \psi_2'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_2^2}}$
 
 $f_{\eta_2}(\eta_2) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} = \frac{1}{\pi \sqrt{1 - \eta_2^2}}$
 
@@ -553,7 +576,7 @@ f_{\eta_2}(\eta_2) = \left\lbrace \begin{array}{cl}
 \end{array} \right.
 $$
 
-6. Математическое ожидание
+Математическое ожидание:
 
 $E\eta_1 = \int_{-1}^{1}\frac{\eta_1 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{1}{\pi} \int_{-1}^{1} \frac{\eta_1 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
 f(-x) = -f(x) \\
@@ -563,7 +586,7 @@ f(-x) = -f(x) \\
 
 Аналогично $E\eta_2 = 0$
 
-6. Дисперсия
+Дисперсия:
 
 $D\eta_1 = \int_{-1}^{1}\frac{\eta_1^2 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{2}{\pi}\int_{0}^{1}\frac{\eta_1^2 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
 \eta_1 = \sin{t} \newline{}
@@ -572,7 +595,7 @@ d\eta_1 = \cos{t}dt
 
 $D\eta_2 = \frac{1}{2}$
 
-7. Ковариация:
+Ковариация:
 
 $\text{cov}(\eta_1, \eta_2) = E(\eta_1\eta_2) - E\eta_1E\eta_2$
 
@@ -614,11 +637,11 @@ $$
 
 - Исследовать $\eta_1$ и $\eta_2$ на независимость и некоррелированность
 
-    **Решение:**
+**Решение:**
 
-    1. Так как $\text{cov}(\eta_1, \eta_2) - 0$, то они **некоррелированы**
-   
-   2. $\eta_1, \eta_2$ - **зависимы**
+1. Так как $\text{cov}(\eta_1, \eta_2) - 0$, то они **некоррелированы**
+
+2. $\eta_1, \eta_2$ - **зависимы**
    
    ToDo
 
@@ -629,17 +652,17 @@ $$
 $Y = \xi + \eta$ - случайная величина. Необходимо найти $f_y(\xi)$
 
 $$
-    f_\xi(\xi) = \left\lbrace \begin{array}{cl} 
-    2e^{-2\xi}, & \xi > 0\\
-    0, & \text{else}
-    \end{array} \right.
+f_\xi(\xi) = \left\lbrace \begin{array}{cl} 
+2e^{-2\xi}, & \xi > 0\\
+0, & \text{else}
+\end{array} \right.
 $$
 
 $$
 f_\eta(\eta) = \left\lbrace \begin{array}{cl} 
-    1, & \eta \in [0; 1]\\
-    0, & \text{else}
-    \end{array} \right. 
+1, & \eta \in [0; 1]\\
+0, & \text{else}
+\end{array} \right. 
 $$
 
 ![](data/fig_04.svg)
@@ -662,6 +685,6 @@ $$
 f_y(\xi) = \left\lbrace \begin{array}{cl} 
     1 - e^{-2\xi}, & \xi \in [0; 1]\\
     e^{2(1 - \xi)} - e^{-2\xi}, & \xi > 1 \\
-    0, & \text{else}
+    0, & \text{else.}
     \end{array} \right. 
 $$
