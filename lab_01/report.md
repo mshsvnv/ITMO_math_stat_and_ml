@@ -126,7 +126,7 @@ y \le x - 2, & x \le y
 \end{array} \right. 
 $$
 
-![](fig_01.svg)
+![](data/fig_01.svg)
 
 Найдем закрашенные площади: $23 * 23 * 0.5 + 22 * 11 = 506.5$.
 
@@ -480,7 +480,7 @@ $$
 
     **Решение:**
 
-    1. Так как $\text{cov}(\phi_1, \phi_2) \neq 0$, то они **коррелированы**
+    1. Так как $\text{cov}(\phi_1, \phi_2) \neq 0$, то они **ytкоррелированы**
 
     2. $\phi_1, \phi_2$ независимы, если: $p_{ij} = P(\phi_1 = \phi_{1i}) P(\phi_2 = \phi_{2j})$
     
@@ -503,7 +503,7 @@ $$
 
     2. $\varphi(\xi) = \eta_1; \xi = \varphi^{-1}(\eta_1) = \psi(\eta_1)$
      
-        ![](fig_02.svg)
+        ![](data/fig_02.svg)
 
         $\eta_1 = \cos{\xi}$ не является монотонной на интервале $\xi \in [-\pi, \pi]$
 
@@ -528,7 +528,7 @@ $$
 
     4. $\varphi(\xi) = \eta_2; \xi = \varphi^{-1}(\eta_2) = \psi(\eta_2)$
 
-        ![](fig_03.svg)    
+        ![](data/fig_03.svg)    
 
         $\eta_2 = \sin{\xi}$ не является монотонной на интервале $\xi \in [-\pi, \pi]$
 
@@ -635,7 +635,7 @@ f_\eta(\eta) = \left\lbrace \begin{array}{cl}
     \end{array} \right. 
 $
 
-![](fig_04.svg)
+![](data/fig_04.svg)
 
 $f_Y(\xi) = \int_{0}^{\infty}2e^{-2t}f_\eta(\xi - t)dt$
 

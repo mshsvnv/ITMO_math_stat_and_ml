@@ -111,47 +111,61 @@ plt.savefig('fig_03.svg')
 plt.clf()
 
 # БЛОК 3: График с осями ξ и t, прямые t = ξ и t = ξ - 1, t >= 0
+plt.figure(figsize=(10, 6))
 
-plt.figure(figsize=(10, 6))  # Создаем новую фигуру
 
-# Генерируем значения для оси ξ (аналог x)
-xi = np.arange(0, 6, 0.1)  # диапазон от 0 до 6 с шагом 0.1 (чтобы t = ξ-1 >= 0)
+xi = np.arange(0, 6, 0.1)
+t1 = xi           # t = ξ
+t2 = xi - 1      # t = ξ - 1
 
-# Вычисляем значения для прямых t = ξ и t = ξ - 1
-t1 = xi  # t = ξ
-t2 = xi - 1  # t = ξ - 1
 
-# Фильтруем значения, чтобы соблюсти условие t >= 0 для второй прямой
 mask = t2 >= 0
 xi_filtered = xi[mask]
 t2_filtered = t2[mask]
 
-# Рисуем прямые
-plt.plot(xi, t1, c='b', label='t = ξ')
-plt.plot(xi_filtered, t2_filtered, c='orange', label='t = ξ - 1')
 
-# Закрашиваем область между прямыми (где t1 > t2)
+plt.plot(xi, t1, c='b', label='t = ξ')
+plt.plot(xi_filtered, t2_filtered, c='r', label='t = ξ - 1')
+
+
+# 1. Основная закрашенная область между прямыми (где t >= 0)
 plt.fill_between(xi_filtered, t2_filtered, t1[mask], alpha=0.3, color='lightblue')
 
-# Настраиваем оси
-plt.axhline(y=0, color='k', linewidth=0.8)  # горизонтальная ось (t-ось)
-plt.axvline(x=0, color='k', linewidth=0.8)  # вертикальная ось (ξ-ось)
 
-# Добавляем аккуратные стрелки с помощью annotate
+# 2. ДОЗАКРАСКА: область ξ ∈ [0,1], t ∈ [0,ξ] (треугольник под t=ξ)
+xi_tri = xi[(xi >= 0) & (xi <= 1)]
+t_upper = xi_tri      # верхняя граница: t = ξ
+t_lower = 0          # нижняя граница: t = 0
+
+
+plt.fill_between(xi_tri, t_lower, t_upper,
+               color='lightblue', alpha=0.4, label='0 ≤ t ≤ ξ, ξ ∈ [0,1]')
+
+
+# Настраиваем оси
+plt.axhline(y=0, color='k', linewidth=0.8)
+plt.axvline(x=0, color='k', linewidth=0.8)
+
+
+# Стрелки на осях
 plt.annotate("", xy=(6, 0), xytext=(0, 0),
-            arrowprops=dict(arrowstyle="->", linewidth=1, color='k'))  # стрелка на оси ξ
+            arrowprops=dict(arrowstyle="->", linewidth=1, color='k'))
 plt.annotate("", xy=(0, 5), xytext=(0, 0),
-            arrowprops=dict(arrowstyle="->", linewidth=1, color='k'))  # стрелка на оси t
+            arrowprops=dict(arrowstyle="->", linewidth=1, color='k'))
+
 
 # Подписи осей
-plt.text(6.2, -0.25, 'ξ', fontsize=12)
-plt.text(-0.25, 5.2, 't', fontsize=12)
+plt.text(6.2, -0.5, 'ξ', fontsize=12)
+plt.text(-0.5, 5.2, 't', fontsize=12)
+
 
 # Настройки графика
 plt.grid(True, alpha=0.3)
 plt.xlim(-0.5, 6.5)
 plt.ylim(-0.5, 5.5)
+plt.xlabel('ξ')
+plt.ylabel('t')
 plt.legend()
 
-# Сохраняем график
+
 plt.savefig('fig_04.svg')
