@@ -678,7 +678,7 @@ $\eta \sim \text{U}_{0, 1}$
 
 **Решение:**
 
-$Y = \xi + \eta$ - случайная величина. Необходимо найти $f_y(\xi)$
+$Y = \xi + \eta$ - случайная величина. Необходимо найти $f_y(y)$
 
 $$
 f_\xi(\xi) = \left\lbrace \begin{array}{cl} 
@@ -696,7 +696,7 @@ $$
 
 ![](data/fig_04.svg)
 
-$f_Y(\xi) = \int_{0}^{\infty}2e^{-2t}f_\eta(\xi - t)dt$
+$f_Y(y) = \int_{0}^{\infty}2e^{-2t}f_\eta(\xi - t)dt$
 
 $0 \le \xi - t \le 1$
 
@@ -711,7 +711,7 @@ $0 \le \xi - t \le 1$
 **Ответ:**
 
 $$
-f_y(\xi) = \left\lbrace \begin{array}{cl} 
+f_Y(y) = \left\lbrace \begin{array}{cl} 
     1 - e^{-2\xi}, & \xi \in [0; 1]\\
     e^{2(1 - \xi)} - e^{-2\xi}, & \xi > 1 \\
     0, & \text{else.}
