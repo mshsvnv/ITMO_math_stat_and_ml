@@ -455,7 +455,7 @@ $$
 \Sigma_{(\phi_1, \phi_2)} = 
 \begin{pmatrix}
     D\phi_1 & \text{cov}(\phi_1, \phi_2) \\
-    \text{cov}(\phi_1, \phi_2) & D\phi_2
+    \text{cov}(\phi_2, \phi_1) & D\phi_2
 \end{pmatrix}
 $$
 
@@ -527,7 +527,7 @@ $\xi: [-\pi, 0] - \cos\xi$ возрастает от $-1$ до $1$
 
 $\xi: [0, \pi] - \cos\xi$ убывает от $1$ до $-1$  
 
-$\xi_1 = \arccos{\eta_1} \text{ лежиТ в } [0, \pi]$
+$\xi_1 = \arccos{\eta_1} \text{ лежит в } [0, \pi]$
 
 $\xi_2 = -\arccos{\eta_1} \text{ лежит в } [-\pi, 0]$
 
@@ -565,6 +565,7 @@ $xi_2 = \pi -\arcsin{\eta_1} \text{ лежит в } [\frac{\pi}{2}, \frac{3\pi}{
 5. $f_{\eta_2}(\eta_2) = \Sigma f_\xi(\psi(\eta_2))|\psi'(\eta_2)| \text{ где } \psi(\eta_2) = \arcsin{\eta_2}$ 
 
 $\psi_1(\eta_2) = \arcsin{\eta_2} \quad \psi_1'(\eta_2) = \frac{1}{\sqrt{1 - \eta_2^2}}$
+
 $\psi_2(\eta_2) = \pi -\arcsin{\eta_1} \quad \psi_2'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_2^2}}$
 
 $f_{\eta_2}(\eta_2) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} = \frac{1}{\pi \sqrt{1 - \eta_2^2}}$
@@ -588,10 +589,10 @@ f(-x) = -f(x) \\
 
 Дисперсия:
 
-$D\eta_1 = \int_{-1}^{1}\frac{\eta_1^2 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{2}{\pi}\int_{0}^{1}\frac{\eta_1^2 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
-\eta_1 = \sin{t} \newline{}
+$$D\eta_1 = \int_{-1}^{1}\frac{\eta_1^2 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{2}{\pi}\int_{0}^{1}\frac{\eta_1^2 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
+\eta_1 = \sin{t} \\
 d\eta_1 = \cos{t}dt 
-\end{vmatrix} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\frac{sin^2{t}\cos{t}dt}{\cos{t}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\sin^2{t}dt = \frac{1}{\pi}(t - \sin{t}\cos{t})|_0^{\frac{\pi}{2}} = \frac{1}{2}$ 
+\end{vmatrix} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\frac{sin^2{t}\cos{t}dt}{\cos{t}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\sin^2{t}dt = \frac{1}{\pi}(t - \sin{t}\cos{t})|_0^{\frac{\pi}{2}} = \frac{1}{2}$$ 
 
 $D\eta_2 = \frac{1}{2}$
 
@@ -601,11 +602,11 @@ $\text{cov}(\eta_1, \eta_2) = E(\eta_1\eta_2) - E\eta_1E\eta_2$
 
 $\eta_1\eta_2 = \cos{\xi}\sin{\xi}$
 
-$E(\eta_1\eta_2) = \int_{-\pi}^{\pi}\cos{\xi}\sin{\xi} f_\xi d\xi = \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{\xi}\sin{\xi}d\xi = \begin{vmatrix}
-f(-x) = -f(x) \newline{}
-\text{Подынтегральная функция является нечетной функцией} \newline{}
+$$E(\eta_1\eta_2) = \int_{-\pi}^{\pi}\cos{\xi}\sin{\xi} f_\xi d\xi = \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{\xi}\sin{\xi}d\xi = \begin{vmatrix}
+f(-x) = -f(x) \\
+\text{Подынтегральная функция является нечетной функцией} \\
 \text{При симметричных пределах интегрирования интеграл равен 0}
-\end{vmatrix} \Rightarrow E(\eta_1\eta_2) = 0$
+\end{vmatrix} \Rightarrow E(\eta_1\eta_2) = 0$$
 
 Ковариационная матрица:
 
