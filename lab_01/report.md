@@ -480,11 +480,11 @@ $$
 
 **Решение:**
 
-1. Так как $\text{cov}(\phi_1, \phi_2) \neq 0$, то они **ytкоррелированы**
+1. Так как $\text{cov}(\phi_1, \phi_2) \neq 0$, то они **коррелированы**
 
 2. $\phi_1, \phi_2$ независимы, если: $p_{ij} = P(\phi_1 = \phi_{1i}) P(\phi_2 = \phi_{2j})$
 
-$P(\phi_1 = 2, \phi_2 = 0) = 0 \\ P(\phi_1 = 2) * P(\phi_2 = 0) = \frac{1}{16} * \frac{1}{4} = \frac{1}{64} \\
+$P(\phi_1 = 2, \phi_2 = 0) = 0 \newline{} P(\phi_1 = 2) * P(\phi_2 = 0) = \frac{1}{16} * \frac{1}{4} = \frac{1}{64} \newline{}
 0 \neq \frac{1}{64} \Rightarrow \phi_1, \phi_2$ - **зависимы**
 
 ### 4. Пусть $\xi \sim \text{U}_{-\pi, \pi}$ и $\eta_1 = \cos{\xi}, \eta_2 = \sin{\xi}$
@@ -567,7 +567,7 @@ f(-x) = -f(x) \\
 6. Дисперсия
 
 $D\eta_1 = \int_{-1}^{1}\frac{\eta_1^2 d\eta_1}{\pi \sqrt{1 - \eta_1^2}} = \frac{2}{\pi}\int_{0}^{1}\frac{\eta_1^2 d\eta_1}{\sqrt{1 - \eta_1^2}} = \begin{vmatrix}
-\eta_1 = \sin{t} \\
+\eta_1 = \sin{t} \newline{}
 d\eta_1 = \cos{t}dt 
 \end{vmatrix} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\frac{sin^2{t}\cos{t}dt}{\cos{t}} = \frac{2}{\pi}\int_{0}^{\frac{\pi}{2}}\sin^2{t}dt = \frac{1}{\pi}(t - \sin{t}\cos{t})|_0^{\frac{\pi}{2}} = \frac{1}{2}$ 
 
@@ -577,9 +577,11 @@ $D\eta_2 = \frac{1}{2}$
 
 $\text{cov}(\eta_1, \eta_2) = E(\eta_1\eta_2) - E\eta_1E\eta_2$
 
-$\eta_1\eta_2 = \cos{\xi}\sin{\xi} \\ E(\eta_1\eta_2) = \int_{-\pi}^{\pi}\cos{\xi}\sin{\xi} f_\xi d\xi = \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{\xi}\sin{\xi}d\xi = \begin{vmatrix}
-f(-x) = -f(x) \\
-\text{Подынтегральная функция является нечетной функцией} \\
+$\eta_1\eta_2 = \cos{\xi}\sin{\xi}$
+
+$E(\eta_1\eta_2) = \int_{-\pi}^{\pi}\cos{\xi}\sin{\xi} f_\xi d\xi = \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{\xi}\sin{\xi}d\xi = \begin{vmatrix}
+f(-x) = -f(x) \newline{}
+\text{Подынтегральная функция является нечетной функцией} \newline{}
 \text{При симметричных пределах интегрирования интеграл равен 0}
 \end{vmatrix} \Rightarrow E(\eta_1\eta_2) = 0$
 
@@ -627,10 +629,14 @@ $$
 
 $Y = \xi + \eta$ - случайная величина. Необходимо найти $f_y(\xi)$
 
-$$f_\xi(\xi) = \left\lbrace \begin{array}{cl} 
+$$
+    f_\xi(\xi) = \left\lbrace \begin{array}{cl} 
     2e^{-2\xi}, & \xi > 0\\
     0, & \text{else}
-    \end{array} \right. \\
+    \end{array} \right.
+$$
+
+$$
 f_\eta(\eta) = \left\lbrace \begin{array}{cl} 
     1, & \eta \in [0; 1]\\
     0, & \text{else}
@@ -643,9 +649,9 @@ $f_Y(\xi) = \int_{0}^{\infty}2e^{-2t}f_\eta(\xi - t)dt$
 
 $0 \le \xi - t \le 1$
 
-1. $\xi \in [0; 1], t \in [0; \xi] \\ \int_{0}^{\xi}2e^{-2t}dt = 1 - e^{-2\xi}$
+1. $\xi \in [0; 1], t \in [0; \xi] \newline{} \int_{0}^{\xi}2e^{-2t}dt = 1 - e^{-2\xi}$
 
-1. $\xi > 1, t \in [\xi - 1; \xi] \\ \int_{\xi - 1}^{\xi}2e^{-2t}dt = e^{2(1 - \xi)} - e^{-2\xi}$
+1. $\xi > 1, t \in [\xi - 1; \xi] \newline{} \int_{\xi - 1}^{\xi}2e^{-2t}dt = e^{2(1 - \xi)} - e^{-2\xi}$
 
 **Ответ:**
 
