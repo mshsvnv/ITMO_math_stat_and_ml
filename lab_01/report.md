@@ -178,11 +178,14 @@ $$
    Сумма $X_2 + X_3 + X_0 = 3, X_1 = 0$
 
    - $X_2 = 0, X_3 = 0, 1, 2$, остальное в $X_0$
+    
     $$
     P = \sum_{k = 0}^{2}
     \frac{3!}{k!(3-k)!}p_{3}^{k}p_{0}^{3 - k}
     $$
+
    - $X_2 = 1, X_3 = 0, 1, 2$
+    
     $$
     P = \sum_{k = 0}^{2} \frac{3!}{1!k!(2-k)!}p_{2}p_{0}^{k}p_{3}^{2 - k}
     $$ 
@@ -195,11 +198,14 @@ $$
     Сумма $X_2 + X_3 + X_0 = 4, X_1 = 0$
    
    - $X_2 = 0, X_3 = 0, 1, 2$, остальное в $X_0$
+    
     $$
     P = \sum_{k = 0}^{2}
     \frac{4!}{k!(4-k)!}p_{3}^{k}p_{0}^{4 - k}
     $$
+
    - $X_2 = 1, X_3 = 0, 1, 2$, остальное в $X_0$
+    
     $$
     P = \sum_{k = 0}^{2} \frac{4!}{1!k!(3-k)!}p_{2}p_{0}^{k}p_{3}^{3 - k}
     $$ 
@@ -238,7 +244,7 @@ e^{-2 |y|} > 0 & y \in (-\infty , +\infty )\\
 $
 2. $\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{e^{-2 |y|}}{\pi(1 + x^2)}dxdy = \left[ \int_{-\infty}^{\infty} \frac{dx}{\pi(1 + x^2)} \right]\left[ \int_{-\infty}^{\infty}e^{-2 |y|} dy\right]$
    
-   1. $\int_{-\infty}^{\infty} \frac{dx}{\pi(1 + x^2)} = \frac{1}{\pi}\int_{-\infty}^{\infty} \frac{dx}{1 + x^2} = \frac{1}{\pi}\arctg|_{-\infty}^{\infty} = \frac{1}{\pi}(\frac{\pi}{2} - (-\frac{\pi}{2})) = 1$
+   1. $\int_{-\infty}^{\infty} \frac{dx}{\pi(1 + x^2)} = \frac{1}{\pi}\int_{-\infty}^{\infty} \frac{dx}{1 + x^2} = \frac{1}{\pi}\arctan|_{-\infty}^{\infty} = \frac{1}{\pi}(\frac{\pi}{2} - (-\frac{\pi}{2})) = 1$
    2. $\int_{-\infty}^{\infty}e^{-2 |y|} dy = \int_{-\infty}^{0}e^{2y} dy + \int_{0}^{\infty}e^{-2y} dy = 2\int_{0}^{\infty}e^{-2y} dy = -e^{-2y}|_0^{\infty} = 0 - (-1) = 1$
     
     $\underset{\mathbb{R^2}}{\int_{}^{}\int_{}^{}}f_{\xi}(x, y)dxdy = 1$
