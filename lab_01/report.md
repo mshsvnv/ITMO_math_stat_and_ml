@@ -494,7 +494,7 @@ $P(\phi_1 = 2, \phi_2 = 0) = 0 \\ P(\phi_1 = 2) * P(\phi_2 = 0) = \frac{1}{16} *
 **Решение:**
 
 1.
- 
+
 $$
 f_\xi = \left\lbrace \begin{array}{cl} 
 \frac{1}{2\pi}, & \xi \in [-\pi, \pi]\\
@@ -625,9 +625,9 @@ $$
 
 **Решение:**
 
-$Y = \xi + \eta$ - случайная величина. Необходимо найти $f_y(y)$
+$Y = \xi + \eta$ - случайная величина. Необходимо найти $f_y(\xi)$
 
-$f_\xi(\xi) = \left\lbrace \begin{array}{cl} 
+$$f_\xi(\xi) = \left\lbrace \begin{array}{cl} 
     2e^{-2\xi}, & \xi > 0\\
     0, & \text{else}
     \end{array} \right. \\
@@ -635,7 +635,7 @@ f_\eta(\eta) = \left\lbrace \begin{array}{cl}
     1, & \eta \in [0; 1]\\
     0, & \text{else}
     \end{array} \right. 
-$
+$$
 
 ![](data/fig_04.svg)
 
@@ -648,6 +648,7 @@ $0 \le \xi - t \le 1$
 1. $\xi > 1, t \in [\xi - 1; \xi] \\ \int_{\xi - 1}^{\xi}2e^{-2t}dt = e^{2(1 - \xi)} - e^{-2\xi}$
 
 **Ответ:**
+
 $$
 f_y(\xi) = \left\lbrace \begin{array}{cl} 
     1 - e^{-2\xi}, & \xi \in [0; 1]\\
