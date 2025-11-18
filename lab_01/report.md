@@ -5,69 +5,69 @@
 ### 1. Определить (с обоснованием), зависимы или независимы следующие события:
 - Несовметсные события;
 
-    **Решение:**
+**Решение:**
 
-    По определению **несовместные** событий: $P(AB) = 0$.
+По определению **несовместные** событий: $P(AB) = 0$.
 
-    По определению **независимые** событий: $P(AB) = P(A)P(B)$.
+По определению **независимые** событий: $P(AB) = P(A)P(B)$.
 
-    Таким образом: $P(A)P(B) = 0 \Rightarrow  P(A) = 0 \text{ или } P(B) = 0$.
+Таким образом: $P(A)P(B) = 0 \Rightarrow  P(A) = 0 \text{ или } P(B) = 0$.
 
-    **Ответ:** несовместные события могут быть независимыми, если одно из них имеет нулевую вероятность, иначе - зависимые.
+**Ответ:** несовместные события могут быть независимыми, если одно из них имеет нулевую вероятность, иначе - зависимые.
 
 - Cобытия, образующие $\sigma$-алгебру $\Sigma$ в пространстве $(\Omega, \Sigma, \mathbb{P})$;
 
-    **Решение:**
+**Решение:**
 
-    По определению $\sigma$-алгебра:
-    - если $A \in \sigma$, то $\overline{A} \in \sigma$;
-    - если $A_1, \dots, A_n, \dots \in \sigma$, то $A_1 + \dots + A_n + \dots \in \sigma$.
+По определению $\sigma$-алгебра:
+- если $A \in \sigma$, то $\overline{A} \in \sigma$;
+- если $A_1, \dots, A_n, \dots \in \sigma$, то $A_1 + \dots + A_n + \dots \in \sigma$.
 
-    *Пример:* $\Omega = \left\lbrace1, 2, 3, 4\right\rbrace, \newline \sigma = \left\lbrace\left\lbrace1\right\rbrace, \left\lbrace2\right\rbrace, \left\lbrace3\right\rbrace, \left\lbrace4\right\rbrace,\left\lbrace1, 2\right\rbrace, \left\lbrace1, 3\right\rbrace, \left\lbrace1, 4\right\rbrace, \left\lbrace2, 3\right\rbrace, \left\lbrace2, 4\right\rbrace, \left\lbrace3, 4\right\rbrace, \left\lbrace1, 2, 3\right\rbrace, \left\lbrace1, 2, 4\right\rbrace, \left\lbrace2, 4, 3\right\rbrace\right\rbrace$ 
+*Пример:* $\Omega = \left\lbrace1, 2, 3, 4\right\rbrace, \newline \sigma = \left\lbrace\left\lbrace1\right\rbrace, \left\lbrace2\right\rbrace, \left\lbrace3\right\rbrace, \left\lbrace4\right\rbrace,\left\lbrace1, 2\right\rbrace, \left\lbrace1, 3\right\rbrace, \left\lbrace1, 4\right\rbrace, \left\lbrace2, 3\right\rbrace, \left\lbrace2, 4\right\rbrace, \left\lbrace3, 4\right\rbrace, \left\lbrace1, 2, 3\right\rbrace, \left\lbrace1, 2, 4\right\rbrace, \left\lbrace2, 4, 3\right\rbrace\right\rbrace$ 
+
+- $A = \left\lbrace1, 2\right\rbrace, B = \left\lbrace1, 3\right\rbrace$
+
+    $P(A) = \frac{1}{2}, \ P(B) = \frac{1}{2}$
+
+    $P(AB) = P({1}) = \frac{1}{4}, \ P(A)P(B) = \frac{1}{4} \Rightarrow A, B - \text{независимые}$  
     
-    - $A = \left\lbrace1, 2\right\rbrace, B = \left\lbrace1, 3\right\rbrace$
-  
-        $P(A) = \frac{1}{2}, \ P(B) = \frac{1}{2}$
-
-        $P(AB) = P({1}) = \frac{1}{4}, \ P(A)P(B) = \frac{1}{4} \Rightarrow A, B - \text{независимые}$  
-        
-    - $A = \left\lbrace1, 2, 3\right\rbrace, B = \left\lbrace1, 2\right\rbrace$
-        
-        $P(A) = \frac{3}{4}, \ P(B) = \frac{1}{2}$
-
-        $P(AB) = P({1, 2}) = \frac{1}{2}, \ P(A)P(B) = \frac{3}{8} \Rightarrow A, B - \text{зависимые}$
+- $A = \left\lbrace1, 2, 3\right\rbrace, B = \left\lbrace1, 2\right\rbrace$
     
-    **Ответ:** события, образующие $\sigma$-алгебру могут быть как зависимые, так и независимые.
+    $P(A) = \frac{3}{4}, \ P(B) = \frac{1}{2}$
+
+    $P(AB) = P({1, 2}) = \frac{1}{2}, \ P(A)P(B) = \frac{3}{8} \Rightarrow A, B - \text{зависимые}$
+
+**Ответ:** события, образующие $\sigma$-алгебру могут быть как зависимые, так и независимые.
 
 - События, имеющие одинаковую вероятность.
 
-    **Решение:**
+**Решение:**
 
-    *Пример:* два последовательных броска монеты
-    - Событие $A$ - в первый раз выпал орел
+*Пример:* два последовательных броска монеты
+- Событие $A$ - в первый раз выпал орел
 
-    $P(A) = \frac{1}{2}$ 
-    - Событие $B$ - во второй раз выпал орел
+$P(A) = \frac{1}{2}$ 
+- Событие $B$ - во второй раз выпал орел
 
-    $P(B) = \frac{1}{2}$
+$P(B) = \frac{1}{2}$
 
-    Проверка независимости: $P(AB) = P(\text{оба раза орел}) = \frac{1}{4}$
+Проверка независимости: $P(AB) = P(\text{оба раза орел}) = \frac{1}{4}$
 
-    $P(A)P(B) = \frac{1}{4} \Rightarrow{} A, B - \text{независимы}$
+$P(A)P(B) = \frac{1}{4} \Rightarrow{} A, B - \text{независимы}$
 
-    *Пример:* бросок одной монеты
-    - Событие $A$ - выпал орел
+*Пример:* бросок одной монеты
+- Событие $A$ - выпал орел
 
-    $P(A) = \frac{1}{2}$ 
-    - Событие $B$ - выпала решка
+$P(A) = \frac{1}{2}$ 
+- Событие $B$ - выпала решка
 
-    $P(B) = \frac{1}{2}$
+$P(B) = \frac{1}{2}$
 
-    Проверка независимости: $P(AB) = P(\text{орел и решка одновременно}) = 0$
+Проверка независимости: $P(AB) = P(\text{орел и решка одновременно}) = 0$
 
-    $P(A)P(B) = \frac{1}{4} \Rightarrow{} A, B - \text{зависимы}$    
+$P(A)P(B) = \frac{1}{4} \Rightarrow{} A, B - \text{зависимы}$    
 
-    **Ответ:** одинаковые вероятности событий не гарантируют их независимость. Всё зависит от того, как связаны события в эксперименте.
+**Ответ:** одинаковые вероятности событий не гарантируют их независимость. Всё зависит от того, как связаны события в эксперименте.
 
 ### 2. Опыт заключается в независимом подбрасывании двух симметричных монет. Рассматриваются следующие события:
 - $A$ - появление герба на первой монете;
@@ -80,42 +80,42 @@
 - $H$ - непоявление ни одного герба;
 - $K$ - появление двух гербов.
 
-    **Решение:**
+**Решение:**
     
-    $\Omega = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}, \text{(Г, Г)}, \text{(Р, Р)}, \right\rbrace$
-    - $A$ - появление герба на первой монете $\left\lbrace \text{(Г, Р)}, \text{(Г, Г)}\right\rbrace$;
-    - $B$ - появление решки на первой монете $\left\lbrace \text{(Р, Р)}, \text{(Р, Г)}\right\rbrace$;
-    - $C$ - появление герба на второй монете $\left\lbrace \text{(Г, Г)}, \text{(Р, Г)}\right\rbrace$;
-    - $D$ - появление решки на второй монете $\left\lbrace \text{(Г, Р)}, \text{(Р, Р)}\right\rbrace$;
-    - $E$ - появление хотя бы одного герба $\left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace$;
-    - $F$ - появление хотя бы одной решки $\left\lbrace \text{(Р, Р)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace$;
-    - $G$ - появление одного герба и одной решки $\left\lbrace \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace$;
-    - $H$ - непоявление ни одного герба $\left\lbrace \text{(Р, Р)}\right\rbrace$;
-    - $K$ - появление двух гербов $\left\lbrace \text{(Г, Г)}\right\rbrace$.
+$\Omega = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}, \text{(Г, Г)}, \text{(Р, Р)}, \right\rbrace$
+- $A$ - появление герба на первой монете $\left\lbrace \text{(Г, Р)}, \text{(Г, Г)}\right\rbrace$;
+- $B$ - появление решки на первой монете $\left\lbrace \text{(Р, Р)}, \text{(Р, Г)}\right\rbrace$;
+- $C$ - появление герба на второй монете $\left\lbrace \text{(Г, Г)}, \text{(Р, Г)}\right\rbrace$;
+- $D$ - появление решки на второй монете $\left\lbrace \text{(Г, Р)}, \text{(Р, Р)}\right\rbrace$;
+- $E$ - появление хотя бы одного герба $\left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace$;
+- $F$ - появление хотя бы одной решки $\left\lbrace \text{(Р, Р)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace$;
+- $G$ - появление одного герба и одной решки $\left\lbrace \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace$;
+- $H$ - непоявление ни одного герба $\left\lbrace \text{(Р, Р)}\right\rbrace$;
+- $K$ - появление двух гербов $\left\lbrace \text{(Г, Г)}\right\rbrace$.
 
-    Определим, каким событиям этого списка равносильны следующие события:
+Определим, каким событиям этого списка равносильны следующие события:
 
-    - $A + C = \left\lbrace \text{(Г, Р)}, \text{(Г, Г)}\right\rbrace \cup \left\lbrace \text{(Г, Г)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)} \right\rbrace = E \ \text{(появление хотя бы одного орла)}$
+- $A + C = \left\lbrace \text{(Г, Р)}, \text{(Г, Г)}\right\rbrace \cup \left\lbrace \text{(Г, Г)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)} \right\rbrace = E \ \text{(появление хотя бы одного орла)}$
 
-        **Ответ**: $A + C = E$ 
-    - $AC = \left\lbrace \text{(Г, Р)}, \text{(Г, Г)}\right\rbrace \cap \left\lbrace \text{(Г, Г)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Г)} \right\rbrace = K \ \text{(появление двух гербов)}$
-  
-        **Ответ**: $AC = K$  
-    - $EF = \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace \cap \left\lbrace \text{(Р, Р)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)} \right\rbrace = G \ \text{(появление одного герба и одной решки)}$
-     
-        **Ответ**: $EF = G$  
-    - $G + E = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace \cup \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}, \text{(Г, Г)} \right\rbrace = E \ \text{(появление хотя бы одного герба)}$
-     
-        **Ответ**: $G + E = E$ 
-    - $GE = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace \cup \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace = G \ \text{(появление одного герба и одной решки)}$
+    **Ответ**: $A + C = E$ 
+- $AC = \left\lbrace \text{(Г, Р)}, \text{(Г, Г)}\right\rbrace \cap \left\lbrace \text{(Г, Г)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Г)} \right\rbrace = K \ \text{(появление двух гербов)}$
 
-        **Ответ**: $GE = G$  
-    - $BD = \left\lbrace \text{(Р, Р)}, \text{(Р, Г)}\right\rbrace \cap \left\lbrace \text{(Г, Р)}, \text{(Р, Р)}\right\rbrace = \left\lbrace \text{(Р, Р)}\right\rbrace = H \ \text{(непоявление ни одного герба)}$
+    **Ответ**: $AC = K$  
+- $EF = \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace \cap \left\lbrace \text{(Р, Р)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)} \right\rbrace = G \ \text{(появление одного герба и одной решки)}$
+    
+    **Ответ**: $EF = G$  
+- $G + E = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace \cup \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}, \text{(Г, Г)} \right\rbrace = E \ \text{(появление хотя бы одного герба)}$
+    
+    **Ответ**: $G + E = E$ 
+- $GE = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace \cup \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace = \left\lbrace \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace = G \ \text{(появление одного герба и одной решки)}$
 
-        **Ответ**: $GE = H$   
-    - $E + K =\left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace \cup \left\lbrace \text{(Г, Г)}\right\rbrace = \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)} \right\rbrace = G \ \text{(появление хотя бы одного герба)}$
-     
-        **Ответ**: $E + K = E$
+    **Ответ**: $GE = G$  
+- $BD = \left\lbrace \text{(Р, Р)}, \text{(Р, Г)}\right\rbrace \cap \left\lbrace \text{(Г, Р)}, \text{(Р, Р)}\right\rbrace = \left\lbrace \text{(Р, Р)}\right\rbrace = H \ \text{(непоявление ни одного герба)}$
+
+    **Ответ**: $GE = H$   
+- $E + K =\left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)}\right\rbrace \cup \left\lbrace \text{(Г, Г)}\right\rbrace = \left\lbrace \text{(Г, Г)}, \text{(Г, Р)}, \text{(Р, Г)} \right\rbrace = G \ \text{(появление хотя бы одного герба)}$
+    
+**Ответ**: $E + K = E$
 
 ### 3. Производится выстрел по вращающейся круговой мишени, в которой закрашены два непересекающихся сектора с углом 20◦. Какова вероятность попадания в закрашенную область?
 
@@ -277,7 +277,7 @@ $$
 
 - Найти маргинальные распределения $\xi$ и $\eta$
     
-    **Решение:**
+**Решение:**
 
 $$
 \begin{array}{|c|c|c|c|c|}
@@ -321,13 +321,21 @@ $$
 
 **Решение:**
 
-$E\xi = \frac{1}{2}*(-1) + \frac{1}{2}*1 = 0$
+$$
+E\xi = \frac{1}{2}*(-1) + \frac{1}{2}*1 = 0
+$$
 
-$E\eta = \frac{11}{24}*(-1) + \frac{7}{24}*1 = -\frac{1}{6}$
+$$
+E\eta = \frac{11}{24}*(-1) + \frac{7}{24}*1 = -\frac{1}{6}
+$$
 
-$E(\xi, \eta) = (0, \frac{1}{6})$
+$$
+E(\xi, \eta) = (0, \frac{1}{6})
+$$
 
-$\text{cov}(\xi, \eta) = \sum_{i}^{}\sum_{j}^{}(\xi_i - E\xi)(\eta_j - E\eta)p_{ij} = -\frac{1}{2}$
+$$
+\text{cov}(\xi, \eta) = \sum_{i}^{}\sum_{j}^{}(\xi_i - E\xi)(\eta_j - E\eta)p_{ij} = -\frac{1}{2}
+$$
 
 Ковариационная матрица:
 
@@ -339,9 +347,13 @@ $$
 \end{pmatrix}
 $$
 
-$D\xi = E\xi^2 - (E\xi) ^ 2 = 1 * \frac{1}{2} + 1 * \frac{1}{2} - 0 = 1$
+$$
+D\xi = E\xi^2 - (E\xi) ^ 2 = 1 * \frac{1}{2} + 1 * \frac{1}{2} - 0 = 1
+$$
 
-$D\eta = E\eta^2 - (E\eta) ^ 2 = 1 * \frac{11}{24} + 1 * \frac{7}{24} - \frac{1}{36} = \frac{13}{18}$
+$$
+D\eta = E\eta^2 - (E\eta) ^ 2 = 1 * \frac{11}{24} + 1 * \frac{7}{24} - \frac{1}{36} = \frac{13}{18}
+$$
 
 $$
 \Sigma_{(\xi, \eta)} = 
@@ -354,14 +366,16 @@ $$
 Корреляционная матрица
 
 $$
-P_{\xi, \eta)} = 
+P_{(\xi, \eta)} = 
 \begin{pmatrix}
     \rho(\xi, \xi) & \rho(\xi, \eta) \\
     \rho(\eta, \xi) & \rho(\eta, \eta)
 \end{pmatrix}
 $$
 
-$\rho(\xi, \eta) = \frac{\text{cov}(\xi, \eta)}{\sqrt{D\xi D\eta}} = \frac{-\frac{1}{2}}{\sqrt{\frac{13}{18}}} = -\frac{3\sqrt{26}}{26}$
+$$
+\rho(\xi, \eta) = \frac{\text{cov}(\xi, \eta)}{\sqrt{D\xi D\eta}} = \frac{-\frac{1}{2}}{\sqrt{\frac{13}{18}}} = -\frac{3\sqrt{26}}{26}
+$$
 
 $$
 P_{(\xi, \eta)} = 
@@ -379,9 +393,13 @@ $$
 
 2. $\xi, \eta$ независимы, если: $p_{ij} = P(\xi = \xi_i) P(\eta = \eta_j)$
 
-$P(\xi = -1, \eta = -1) = \frac{1}{8}$
+$$
+P(\xi = -1, \eta = -1) = \frac{1}{8}
+$$
 
-$P(\xi = -1) * P(\eta = -1) = \frac{1}{2} * \frac{11}{24} = \frac{11}{48} $
+$$
+P(\xi = -1) * P(\eta = -1) = \frac{1}{2} * \frac{11}{24} = \frac{11}{48}
+$$
 
 $\frac{11}{48} \neq \frac{1}{8} \Rightarrow \xi, \eta$ - **зависимы**
 
@@ -466,27 +484,39 @@ $$
   
 **Решение:**
 
-$E\phi_1 = 2 * \frac{1}{16} + 3 * \frac{2}{16} + 4 * \frac{3}{16} + 5 * \frac{4}{16} + 6 * \frac{3}{16} + 7 * \frac{1}{16} + 8 * \frac{1}{16} = 5$
+$$
+E\phi_1 = 2 * \frac{1}{16} + 3 * \frac{2}{16} + 4 * \frac{3}{16} + 5 * \frac{4}{16} + 6 * \frac{3}{16} + 7 * \frac{1}{16} + 8 * \frac{1}{16} = 5
+$$
 
-$E\phi_2 = \frac{3}{4}$
+$$
+E\phi_2 = \frac{3}{4}
+$$
 
-$E(\phi_1, \phi_2) = (5, \frac{3}{4})$
+$$
+E(\phi_1, \phi_2) = (5, \frac{3}{4})
+$$
 
-$\text{cov}(\phi_1, \phi_2) = \sum_{i}^{}\sum_{j}^{}(\phi_{1i} - E\phi_1)(\phi_{2j} - E\phi_2)p_{ij} = -\frac{1}{4}$
+$$
+\text{cov}(\phi_1, \phi_2) = \sum_{i}^{}\sum_{j}^{}(\phi_{1i} - E\phi_1)(\phi_{2j} - E\phi_2)p_{ij} = -\frac{1}{4}
+$$
 
 Ковариационная матрица:
 
 $$
-\Sigma_{(\phi_1, \phi_2)} = 
+\Sigma_{(\phi_1, \phi_2)} =
 \begin{pmatrix}
     D\phi_1 & \text{cov}(\phi_1, \phi_2) \\
     \text{cov}(\phi_2, \phi_1) & D\phi_2
 \end{pmatrix}
 $$
 
-$D\phi_1 = E\phi_1^2 - (E\phi_1) ^ 2 = \frac{55}{2} - 25 = 2.5$
+$$
+D\phi_1 = E\phi_1^2 - (E\phi_1) ^ 2 = \frac{55}{2} - 25 = 2.5
+$$
 
-$D\phi_2 = E\phi_2^2 - (E\phi_2) ^ 2 = \frac{3}{4} - \frac{9}{16} = \frac{3}{16}$
+$$
+D\phi_2 = E\phi_2^2 - (E\phi_2) ^ 2 = \frac{3}{4} - \frac{9}{16} = \frac{3}{16}
+$$
 
 $$
 \Sigma_{(\xi, \eta)} = 
@@ -583,9 +613,9 @@ $\xi: [-\frac{\pi}{2}, \frac{\pi}{2}] - \sin\xi$ возрастает от $-1$ 
 
 $\xi: [\frac{\pi}{2}, \pi] - \sin\xi$ убывает от $1$ до $0$
 
-$\xi_1 = \arcsin{\eta_2} \text{ лежит в } [-\frac{\pi}{2}, \frac{\pi}{2}] $
+$\xi_1 = \arcsin{\eta_2} \text{ лежит в } [-\frac{\pi}{2}, \frac{\pi}{2}]$
 
-$xi_2 = \pi -\arcsin{\eta_1} \text{ лежит в } [\frac{\pi}{2}, \frac{3\pi}{2}]$
+$\xi_2 = \pi -\arcsin{\eta_1} \text{ лежит в } [\frac{\pi}{2}, \frac{3\pi}{2}]$
 
 5. $f_{\eta_2}(\eta_2) = \Sigma f_\xi(\psi(\eta_2))|\psi'(\eta_2)| \text{ где } \psi(\eta_2) = \arcsin{\eta_2}$ 
 
@@ -623,9 +653,13 @@ $D\eta_2 = \frac{1}{2}$
 
 Ковариация:
 
-$\text{cov}(\eta_1, \eta_2) = E(\eta_1\eta_2) - E\eta_1E\eta_2$
+$$
+\text{cov}(\eta_1, \eta_2) = E(\eta_1\eta_2) - E\eta_1E\eta_2
+$$
 
-$\eta_1\eta_2 = \cos{\xi}\sin{\xi}$
+$$
+\eta_1\eta_2 = \cos{\xi}\sin{\xi}
+$$
 
 $$E(\eta_1\eta_2) = \int_{-\pi}^{\pi}\cos{\xi}\sin{\xi} f_\xi d\xi = \frac{1}{2\pi}\int_{-\pi}^{\pi}\cos{\xi}\sin{\xi}d\xi = \begin{vmatrix}
 f(-x) = -f(x) \\
@@ -696,9 +730,11 @@ $$
 
 ![](data/fig_04.svg)
 
-$f_Y(y) = \int_{0}^{\infty}2e^{-2t}f_\eta(\xi - t)dt$
+$$
+f_Y(y) = \int_{0}^{\infty}2e^{-2t}f_\eta(\xi - t)dt
+$$
 
-$0 \le \xi - t \le 1$
+$$0 \le \xi - t \le 1$$
 
 1. $\xi \in [0; 1], t \in [0; \xi]$ 
    
