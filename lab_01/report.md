@@ -621,7 +621,7 @@ $\xi_2 = \pi -\arcsin{\eta_1} \text{ лежит в } [\frac{\pi}{2}, \frac{3\pi}
 
 $\psi_1(\eta_2) = \arcsin{\eta_2} \quad \psi_1'(\eta_2) = \frac{1}{\sqrt{1 - \eta_2^2}}$
 
-$\psi_2(\eta_2) = \pi -\arcsin{\eta_1} \quad \psi_2'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_2^2}}$
+$\psi_2(\eta_2) = \pi -\arcsin{\eta_2} \quad \psi_2'(\eta_1) = -\frac{1}{\sqrt{1 - \eta_2^2}}$
 
 $f_{\eta_2}(\eta_2) = \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} + \frac{1}{2\pi} * \frac{1}{\sqrt{1 - \eta_2^2}} = \frac{1}{\pi \sqrt{1 - \eta_2^2}}$
 
